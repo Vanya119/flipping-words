@@ -1,0 +1,94 @@
+@import 'tailwindcss';
+
+/*
+  Цвета берутся из темы Telegram (--tg-theme-*), которые выставляет telegram-web-app.js.
+  --fb-* — фолбэки для открытия в обычном браузере.
+*/
+:root {
+  --fb-bg: #efeff4;
+  --fb-section: #ffffff;
+  --fb-text: #000000;
+  --fb-hint: #8e8e93;
+  --fb-link: #2481cc;
+  --fb-button: #2481cc;
+  --fb-button-text: #ffffff;
+  --fb-destructive: #e53935;
+  --fb-section-header: #6d6d72;
+  --fb-separator: rgba(60, 60, 67, 0.15);
+
+  --bg: var(--tg-theme-secondary-bg-color, var(--fb-bg));
+  --section: var(--tg-theme-section-bg-color, var(--tg-theme-bg-color, var(--fb-section)));
+  --text: var(--tg-theme-text-color, var(--fb-text));
+  --hint: var(--tg-theme-hint-color, var(--fb-hint));
+  --link: var(--tg-theme-link-color, var(--fb-link));
+  --accent: var(--tg-theme-accent-text-color, var(--link));
+  --button: var(--tg-theme-button-color, var(--fb-button));
+  --button-text: var(--tg-theme-button-text-color, var(--fb-button-text));
+  --destructive: var(--tg-theme-destructive-text-color, var(--fb-destructive));
+  --section-header: var(--tg-theme-section-header-text-color, var(--fb-section-header));
+  --separator: var(--tg-theme-section-separator-color, var(--fb-separator));
+  --success: #31b545;
+  --danger: #ef4444;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fb-bg: #000000;
+    --fb-section: #1c1c1e;
+    --fb-text: #ffffff;
+    --fb-hint: #8d8e93;
+    --fb-link: #3e88f7;
+    --fb-button: #3e88f7;
+    --fb-section-header: #8d8e93;
+    --fb-separator: rgba(84, 84, 88, 0.6);
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-section: var(--section);
+  --color-text: var(--text);
+  --color-hint: var(--hint);
+  --color-link: var(--link);
+  --color-accent: var(--accent);
+  --color-button: var(--button);
+  --color-button-text: var(--button-text);
+  --color-destructive: var(--destructive);
+  --color-section-header: var(--section-header);
+  --color-separator: var(--separator);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', Roboto, 'Segoe UI', Helvetica, Arial, sans-serif;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: var(--font-sans);
+  margin: 0;
+  min-height: 100vh;
+}
+
+input,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+.pressable {
+  transition:
+    opacity 0.15s,
+    transform 0.15s;
+}
+.pressable:active {
+  opacity: 0.6;
+}
