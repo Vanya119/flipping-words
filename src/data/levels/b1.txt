@@ -1,0 +1,137 @@
+achieve|достигать
+advice|совет
+afford|позволить себе
+agree|соглашаться
+allow|разрешать
+appear|появляться
+apply|подавать заявку
+argue|спорить
+arrange|договариваться, устраивать
+attempt|попытка
+attract|привлекать
+avoid|избегать
+behave|вести себя
+believe|верить
+benefit|польза
+career|карьера
+cause|вызывать, быть причиной
+celebrate|праздновать
+challenge|вызов, испытание
+character|характер, персонаж
+compare|сравнивать
+complain|жаловаться
+confident|уверенный
+connect|соединять
+consider|рассматривать
+contain|содержать
+continue|продолжать
+convince|убеждать
+create|создавать
+crowd|толпа
+culture|культура
+damage|ущерб
+deal with|справляться с
+degree|степень, диплом
+deliver|доставлять
+depend|зависеть
+describe|описывать
+destroy|разрушать
+develop|развивать
+disappear|исчезать
+discover|обнаруживать
+discuss|обсуждать
+earn|зарабатывать
+effect|эффект, результат
+effort|усилие
+encourage|поощрять
+environment|окружающая среда
+equipment|оборудование
+especially|особенно
+event|событие
+exist|существовать
+expect|ожидать
+experience|опыт
+experiment|эксперимент
+fail|терпеть неудачу
+fair|справедливый
+familiar|знакомый
+fear|страх
+feature|черта, особенность
+fix|чинить
+force|заставлять
+generous|щедрый
+goal|цель
+government|правительство
+guess|угадывать
+habit|привычка
+honest|честный
+improve|улучшать
+include|включать
+increase|увеличивать
+influence|влияние
+injury|травма
+introduce|представлять, вводить
+invent|изобретать
+knowledge|знание
+lack|нехватка, отсутствие
+manage|справляться, руководить
+mention|упоминать
+method|метод
+mind|разум
+nervous|нервный
+notice|замечать
+offer|предлагать
+opinion|мнение
+opportunity|возможность
+organise|организовывать
+patient|терпеливый
+permission|разрешение
+persuade|уговаривать
+pollution|загрязнение
+popular|популярный
+possible|возможный
+prefer|предпочитать
+prepare|готовить(ся)
+pretend|притворяться
+prevent|предотвращать
+proud|гордый
+prove|доказывать
+provide|обеспечивать, предоставлять
+public|общественный
+purpose|назначение, цель
+realise|осознавать
+receive|получать
+recommend|рекомендовать
+reduce|сокращать
+refuse|отказываться
+relationship|отношения
+relax|расслабляться
+rely on|полагаться на
+remind|напоминать
+replace|заменять
+require|требовать
+research|исследование
+respect|уважение
+responsible|ответственный
+result|результат
+risk|риск
+rule|правило
+satisfied|довольный
+schedule|расписание
+search|искать
+skill|навык
+solution|решение
+succeed|преуспевать
+success|успех
+suggest|предлагать, советовать
+support|поддерживать
+suppose|предполагать
+survive|выживать
+tradition|традиция
+trust|доверять
+various|различный
+volunteer|волонтёр
+warn|предупреждать
+whole|целый
+wonder|интересоваться, задаваться вопросом
+worth|стоящий

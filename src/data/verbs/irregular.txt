@@ -1,0 +1,104 @@
+be|was/were|been|быть
+become|became|become|становиться
+begin|began|begun|начинать
+bend|bent|bent|сгибать
+bet|bet|bet|держать пари
+bite|bit|bitten|кусать
+blow|blew|blown|дуть
+break|broke|broken|ломать
+bring|brought|brought|приносить
+build|built|built|строить
+burn|burnt/burned|burnt/burned|гореть, жечь
+buy|bought|bought|покупать
+catch|caught|caught|ловить
+choose|chose|chosen|выбирать
+come|came|come|приходить
+cost|cost|cost|стоить
+cut|cut|cut|резать
+deal|dealt|dealt|иметь дело
+dig|dug|dug|копать
+do|did|done|делать
+draw|drew|drawn|рисовать
+dream|dreamt/dreamed|dreamt/dreamed|мечтать, видеть сон
+drink|drank|drunk|пить
+drive|drove|driven|водить
+eat|ate|eaten|есть
+fall|fell|fallen|падать
+feed|fed|fed|кормить
+feel|felt|felt|чувствовать
+fight|fought|fought|драться
+find|found|found|находить
+fly|flew|flown|летать
+forbid|forbade|forbidden|запрещать
+forget|forgot|forgotten|забывать
+forgive|forgave|forgiven|прощать
+freeze|froze|frozen|замерзать
+get|got|got/gotten|получать
+give|gave|given|давать
+go|went|gone|идти
+grow|grew|grown|расти
+hang|hung|hung|висеть, вешать
+have|had|had|иметь
+hear|heard|heard|слышать
+hide|hid|hidden|прятать
+hit|hit|hit|ударять
+hold|held|held|держать
+hurt|hurt|hurt|причинять боль
+keep|kept|kept|хранить
+know|knew|known|знать
+lay|laid|laid|класть
+lead|led|led|вести
+learn|learnt/learned|learnt/learned|учить
+leave|left|left|покидать
+lend|lent|lent|давать взаймы
+let|let|let|позволять
+lie|lay|lain|лежать
+light|lit|lit|зажигать
+lose|lost|lost|терять
+make|made|made|делать, создавать
+mean|meant|meant|значить
+meet|met|met|встречать
+pay|paid|paid|платить
+put|put|put|класть, ставить
+quit|quit|quit|бросать, уходить
+read|read|read|читать
+ride|rode|ridden|ездить верхом
+ring|rang|rung|звонить
+rise|rose|risen|подниматься
+run|ran|run|бежать
+say|said|said|сказать
+see|saw|seen|видеть
+seek|sought|sought|искать
+sell|sold|sold|продавать
+send|sent|sent|отправлять
+set|set|set|устанавливать
+shake|shook|shaken|трясти
+shine|shone|shone|сиять
+shoot|shot|shot|стрелять
+show|showed|shown|показывать
+shut|shut|shut|закрывать
+sing|sang|sung|петь
+sink|sank|sunk|тонуть
+sit|sat|sat|сидеть
+sleep|slept|slept|спать
+speak|spoke|spoken|говорить
+spend|spent|spent|тратить
+spread|spread|spread|распространять
+stand|stood|stood|стоять
+steal|stole|stolen|красть
+stick|stuck|stuck|приклеивать
+sting|stung|stung|жалить
+strike|struck|struck|бить, бастовать
+swear|swore|sworn|клясться
+swim|swam|swum|плавать
+take|took|taken|брать
+teach|taught|taught|преподавать
+tear|tore|torn|рвать
+tell|told|told|рассказывать
+think|thought|thought|думать
+throw|threw|thrown|бросать
+understand|understood|understood|понимать
+wake|woke|woken|просыпаться
+wear|wore|worn|носить (одежду)
+win|won|won|побеждать
+write|wrote|written|писать

@@ -20,10 +20,15 @@ export function isDue(w: Word, now = Date.now()) {
 }
 
 export function grade(w: Word, ok: boolean, now = Date.now()): Word {
-  if (!ok) return { ...w, box: 0, due: now }
+  if (!ok) return { ...w, box: 0, due: now, lapses: (w.lapses ?? 0) + 1 }
   const box = Math.min(w.box + 1, MAX_BOX)
   // Отсчитываем от начала дня, чтобы слово «на завтра» было доступно с утра
   return { ...w, box, due: startOfDay(now) + INTERVAL_DAYS[box] * DAY }
+}
+
+export function dayKey(ts = Date.now()) {
+  const d = new Date(ts)
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
 }
 
 export function dueCount(words: Word[], now = Date.now()) {

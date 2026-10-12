@@ -1,0 +1,40 @@
+joy|радость
+anger|гнев
+sadness|печаль
+fear|страх
+surprise|удивление
+disgust|отвращение
+shame|стыд
+pride|гордость
+jealousy|ревность
+envy|зависть
+loneliness|одиночество
+grateful|благодарный
+cheerful|жизнерадостный
+calm|спокойный
+upset|расстроенный
+embarrassed|смущённый
+confused|сбитый с толку
+disappointed|разочарованный
+relieved|испытывающий облегчение
+anxious|тревожный
+shy|застенчивый
+brave|смелый
+lazy|ленивый
+hard-working|трудолюбивый
+stubborn|упрямый
+honest|честный
+rude|грубый
+selfish|эгоистичный
+generous|щедрый
+reliable|надёжный
+sensitive|чувствительный
+patient|терпеливый
+moody|переменчивый в настроении
+outgoing|общительный
+modest|скромный
+arrogant|высокомерный
+cheer up|подбадривать
+calm down|успокаиваться
+mood|настроение
+feeling|чувство

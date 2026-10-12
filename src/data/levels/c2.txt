@@ -1,0 +1,130 @@
+aberration|отклонение от нормы
+abhor|питать отвращение
+acquiesce|молча соглашаться
+acrimonious|язвительный
+admonish|делать выговор
+alleviate|облегчать
+ameliorate|улучшать положение
+anachronism|анахронизм
+antithesis|противоположность
+apathy|апатия
+appease|умиротворять
+assiduous|усердный
+audacious|дерзкий
+austere|суровый
+banal|банальный
+belligerent|воинственный
+benevolent|доброжелательный
+bolster|подкреплять
+candid|откровенный
+capricious|капризный
+castigate|сурово критиковать
+circumvent|обходить
+clandestine|тайный
+cogent|веский
+complicit|причастный, соучастный
+conundrum|головоломка
+copious|обильный
+corroborate|подтверждать
+culminate|достигать кульминации
+cursory|беглый
+dearth|скудость
+debilitate|ослаблять
+decry|порицать
+deference|почтение
+deleterious|пагубный
+denounce|осуждать
+deride|высмеивать
+desultory|бессистемный
+didactic|назидательный
+diligent|прилежный
+disparage|принижать
+disparity|неравенство
+dogmatic|догматичный
+ebullient|кипучий
+eclectic|эклектичный
+efficacy|действенность
+egregious|вопиющий
+eloquent|красноречивый
+elusive|неуловимый
+emulate|подражать
+enigmatic|загадочный
+ephemeral|мимолётный
+equanimity|невозмутимость
+equivocal|уклончивый
+erroneous|ошибочный
+esoteric|эзотерический
+euphemism|эвфемизм
+exacting|требовательный
+exculpate|снимать вину
+exemplary|образцовый
+exonerate|реабилитировать
+expedient|целесообразный
+fastidious|привередливый
+fervent|пылкий
+fortuitous|случайный
+frugal|бережливый
+futile|тщетный
+gregarious|общительный
+hackneyed|избитый
+harbinger|предвестник
+hubris|высокомерие
+idiosyncrasy|причуда
+impeccable|безупречный
+impetuous|импульсивный
+incessant|непрекращающийся
+incongruous|неуместный
+indolent|ленивый
+ineffable|невыразимый
+innocuous|безобидный
+insatiable|ненасытный
+intransigent|непримиримый
+inundate|наводнять
+irrevocable|бесповоротный
+juxtapose|сопоставлять
+laconic|лаконичный
+lethargic|вялый
+loquacious|болтливый
+magnanimous|великодушный
+malleable|податливый
+mercurial|переменчивый
+mollify|успокаивать
+mundane|обыденный
+nefarious|гнусный
+nonchalant|беззаботный
+obfuscate|запутывать
+obsequious|подобострастный
+ostensible|мнимый
+ostracise|подвергать остракизму
+paucity|недостаточность
+penchant|склонность
+perfunctory|поверхностный
+pernicious|губительный
+perspicacious|проницательный
+platitude|банальность
+polemic|полемика
+precarious|шаткий
+proclivity|наклонность
+prodigious|громадный
+propensity|предрасположенность
+quandary|затруднение
+quintessential|квинтэссенциальный
+rancour|злоба
+recalcitrant|непокорный
+reticent|сдержанный
+sanguine|оптимистичный
+scrupulous|щепетильный
+serendipity|счастливая случайность
+spurious|ложный
+superfluous|излишний
+surreptitious|скрытный
+tenacious|упорный
+trepidation|трепет
+ubiquitous|вездесущий
+unequivocal|однозначный
+vehement|яростный
+venerate|почитать
+verbose|многословный
+vindicate|доказывать правоту
+volatile|изменчивый
+zealous|рьяный

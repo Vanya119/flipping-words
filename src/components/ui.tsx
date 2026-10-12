@@ -33,7 +33,7 @@ export function Cell({ title, subtitle, before, after, chevron, tone = 'default'
       className={`group flex w-full items-center gap-3 pl-4 text-left ${onClick ? 'pressable cursor-pointer' : ''}`}
     >
       {before && <div className="shrink-0">{before}</div>}
-      <div className="flex min-h-11 flex-1 items-center gap-2 border-b border-separator py-2.5 pr-4 group-last:border-b-0">
+      <div className="flex min-h-11 min-w-0 flex-1 items-center gap-2 border-b border-separator py-2.5 pr-4 group-last:border-b-0">
         <div className="min-w-0 flex-1">
           <div className={`truncate text-[16px] ${color}`}>{title}</div>
           {subtitle && <div className="truncate text-[14px] text-hint">{subtitle}</div>}

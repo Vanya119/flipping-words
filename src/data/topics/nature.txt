@@ -1,0 +1,40 @@
+sky|небо
+star|звезда
+moon|луна
+earth|земля
+ocean|океан
+sea|море
+lake|озеро
+valley|долина
+hill|холм
+desert|пустыня
+field|поле
+cave|пещера
+waterfall|водопад
+tree|дерево
+leaf|лист
+flower|цветок
+grass|трава
+bird|птица
+insect|насекомое
+storm|буря, шторм
+thunder|гром
+lightning|молния
+fog|туман
+ice|лёд
+frost|мороз
+temperature|температура
+forecast|прогноз
+humid|влажный
+sunny|солнечный
+cloudy|облачный
+windy|ветреный
+rainbow|радуга
+drought|засуха
+flood|наводнение
+earthquake|землетрясение
+climate|климат
+wildlife|дикая природа
+sunrise|восход
+sunset|закат
+breeze|лёгкий ветерок

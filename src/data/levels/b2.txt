@@ -1,0 +1,132 @@
+abandon|покидать, бросать
+absorb|поглощать
+accurate|точный, верный
+acknowledge|признавать
+acquire|приобретать
+adapt|приспосабливаться
+adequate|адекватный, достаточный
+adjust|настраивать
+admire|восхищаться
+advocate|выступать за
+affordable|доступный по цене
+aggressive|агрессивный
+alter|изменять
+ambitious|амбициозный
+anticipate|предвидеть
+anxiety|тревога
+apparent|видимый, явный
+approach|подход
+appropriate|подходящий
+assess|оценивать
+assume|допускать, предполагать
+assure|уверять
+awareness|осведомлённость
+barrier|барьер
+bias|предвзятость
+boost|повышать
+brief|краткий
+burden|бремя
+capable|способный
+cautious|осторожный
+circumstance|обстоятельство
+claim|утверждать
+collapse|рушиться
+commitment|обязательство
+compensate|компенсировать
+competent|компетентный
+concern|беспокойство
+conclude|делать вывод
+conduct|проводить
+consequence|последствие
+considerable|немалый
+consistent|последовательный
+constant|постоянный
+contribute|вносить вклад
+controversial|спорный
+convenient|удобный
+crucial|ключевой
+curious|любопытный
+debate|дебаты
+decline|снижаться, отклонять
+deny|отрицать
+deserve|заслуживать
+determine|определять
+dilemma|дилемма
+distinguish|различать
+diverse|разнообразный
+efficient|эффективный
+eliminate|устранять
+emerge|возникать
+emphasise|подчёркивать
+enable|давать возможность
+enormous|огромный
+ensure|гарантировать, обеспечивать
+estimate|приблизительно оценивать
+evidence|доказательство
+exaggerate|преувеличивать
+expand|расширять
+exploit|эксплуатировать
+extent|степень, масштаб
+facility|объект, сооружение
+flexible|гибкий
+frustrated|раздражённый
+fundamental|фундаментальный
+genuine|настоящий, искренний
+guarantee|гарантия
+hesitate|колебаться, не решаться
+highlight|выделять
+identify|опознавать, выявлять
+ignore|игнорировать
+impact|воздействие
+implement|внедрять
+imply|подразумевать
+impose|навязывать
+inevitable|неизбежный
+initial|начальный
+insight|понимание, озарение
+insist|настаивать
+intend|намереваться
+interpret|толковать
+investigate|расследовать
+justify|обосновывать, оправдывать
+maintain|поддерживать, сохранять
+massive|массивный
+minimise|минимизировать
+moderate|умеренный
+motivate|мотивировать
+negotiate|вести переговоры
+obstacle|препятствие
+obtain|добывать, получать
+obvious|очевидный
+occur|происходить
+outcome|исход
+overcome|преодолевать
+participate|участвовать
+perceive|воспринимать
+perspective|точка зрения
+potential|потенциал
+precise|чёткий, точный
+predict|предсказывать
+priority|приоритет
+pursue|добиваться
+reluctant|неохотный
+remarkable|замечательный
+resolve|разрешать (проблему)
+resource|ресурс
+restrict|ограничивать
+reveal|раскрывать
+sacrifice|жертва
+significant|значительный
+somewhat|отчасти
+strategy|стратегия
+substantial|существенный
+sufficient|достаточный
+sustainable|устойчивый
+tend|иметь тенденцию
+threat|угроза
+tolerate|терпеть
+trend|тенденция
+undergo|подвергаться
+vary|различаться
+vital|жизненно важный
+withdraw|снимать, отзывать

@@ -1,0 +1,40 @@
+software|программное обеспечение
+hardware|аппаратное обеспечение
+device|устройство
+screen|экран
+keyboard|клавиатура
+mouse|мышь
+laptop|ноутбук
+download|скачивать
+upload|загружать
+install|устанавливать
+update|обновление
+password|пароль
+account|аккаунт
+user|пользователь
+data|данные
+database|база данных
+server|сервер
+network|сеть
+browser|браузер
+website|сайт
+link|ссылка
+file|файл
+folder|папка
+backup|резервная копия
+bug|ошибка в программе
+feature|функция
+release|релиз, выпуск
+code|код
+developer|разработчик
+test|тестировать
+deploy|развёртывать
+storage|хранилище
+cloud|облако
+security|безопасность
+encryption|шифрование
+log in|входить в систему
+settings|настройки
+notification|уведомление
+app|приложение
+artificial intelligence|искусственный интеллект

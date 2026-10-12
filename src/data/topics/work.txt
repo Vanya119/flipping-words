@@ -1,0 +1,40 @@
+colleague|коллега
+employer|работодатель
+employee|сотрудник
+salary|зарплата
+deadline|крайний срок
+promotion|повышение
+resign|увольняться
+hire|нанимать
+fire|увольнять
+interview|собеседование
+CV|резюме
+contract|контракт
+client|клиент
+customer|покупатель
+supplier|поставщик
+profit|прибыль
+loss|убыток
+budget|бюджет
+revenue|выручка
+invoice|счёт-фактура
+investment|инвестиция
+shareholder|акционер
+headquarters|штаб-квартира
+branch|филиал
+department|отдел
+schedule|график
+agenda|повестка дня
+presentation|презентация
+negotiation|переговоры
+deal|сделка
+partner|партнёр
+competitor|конкурент
+market share|доля рынка
+launch|запуск
+target|цель, задача
+report|отчёт
+overtime|сверхурочная работа
+part-time|неполный рабочий день
+remote work|удалённая работа
+workload|рабочая нагрузка

@@ -1,0 +1,40 @@
+recipe|рецепт
+ingredient|ингредиент
+flour|мука
+butter|сливочное масло
+oil|растительное масло
+pepper|перец
+garlic|чеснок
+onion|лук
+potato|картофель
+carrot|морковь
+cabbage|капуста
+cucumber|огурец
+tomato|помидор
+mushroom|гриб
+beef|говядина
+pork|свинина
+lamb|баранина
+seafood|морепродукты
+pasta|макароны
+cereal|хлопья
+yoghurt|йогурт
+honey|мёд
+jam|варенье
+dessert|десерт
+cake|торт
+biscuit|печенье
+juice|сок
+spicy|острый
+sweet|сладкий
+sour|кислый
+bitter|горький
+salty|солёный
+fry|жарить
+boil|варить
+bake|печь
+roast|запекать
+chop|нарезать
+peel|чистить (от кожуры)
+slice|ломтик
+portion|порция

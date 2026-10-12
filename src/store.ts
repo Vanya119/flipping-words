@@ -1,16 +1,23 @@
 import { useSyncExternalStore } from 'react'
 import { cloudLoad, cloudSave } from './cloud'
-import { grade } from './srs'
+import { dayKey, grade, LEARNED_BOX } from './srs'
 import { cloudStorageAvailable, userId } from './telegram'
 import type { AppData, Deck, Settings, Word } from './types'
 
 const LOCAL_KEY = `fw_data_${userId() ?? 'guest'}`
 
-const empty = (): AppData => ({ v: 1, decks: [], settings: { direction: 'en-ru' }, updatedAt: 0 })
+const empty = (): AppData => ({ v: 1, decks: [], settings: { direction: 'en-ru' }, days: {}, levelTests: [], updatedAt: 0 })
 
 function normalize(d: Partial<AppData>): AppData {
   const base = empty()
-  return { ...base, ...d, settings: { ...base.settings, ...d.settings }, decks: d.decks ?? [] }
+  return {
+    ...base,
+    ...d,
+    settings: { ...base.settings, ...d.settings },
+    decks: d.decks ?? [],
+    days: d.days ?? {},
+    levelTests: d.levelTests ?? [],
+  }
 }
 
 function loadLocal(): AppData | null {
@@ -96,9 +103,9 @@ const mapDeck = (deckId: string, fn: (d: Deck) => Deck) =>
   update((s) => ({ ...s, decks: s.decks.map((d) => (d.id === deckId ? fn(d) : d)) }))
 
 export const actions = {
-  createDeck(name: string, words: Word[] = []): string {
+  createDeck(name: string, words: Word[] = [], source?: string): string {
     const id = uid()
-    update((s) => ({ ...s, decks: [...s.decks, { id, name, createdAt: Date.now(), words }] }))
+    update((s) => ({ ...s, decks: [...s.decks, { id, name, createdAt: Date.now(), words, source }] }))
     return id
   },
   renameDeck(deckId: string, name: string) {
@@ -118,16 +125,27 @@ export const actions = {
   deleteWord(deckId: string, wordId: string) {
     mapDeck(deckId, (d) => ({ ...d, words: d.words.filter((w) => w.id !== wordId) }))
   },
-  /** Записывает ответ по слову (ищет слово во всех колодах). */
-  gradeWord(wordId: string, ok: boolean) {
-    update((s) => ({
-      ...s,
-      decks: s.decks.map((d) =>
-        d.words.some((w) => w.id === wordId)
-          ? { ...d, words: d.words.map((w) => (w.id === wordId ? grade(w, ok) : w)) }
-          : d,
-      ),
-    }))
+  /**
+   * Записывает ответ: обновляет статистику дня и, если grade, — интервал повторения слова.
+   * Слово ищется во всех колодах.
+   */
+  review(wordId: string, ok: boolean, gradeWord: boolean) {
+    update((s) => {
+      const decks = gradeWord
+        ? s.decks.map((d) =>
+            d.words.some((w) => w.id === wordId)
+              ? { ...d, words: d.words.map((w) => (w.id === wordId ? grade(w, ok) : w)) }
+              : d,
+          )
+        : s.decks
+      const key = dayKey()
+      const day = s.days[key] ?? { r: 0, c: 0, l: 0 }
+      const learned = decks.reduce((n, d) => n + d.words.filter((w) => w.box >= LEARNED_BOX).length, 0)
+      return { ...s, decks, days: { ...s.days, [key]: { r: day.r + 1, c: day.c + (ok ? 1 : 0), l: learned } } }
+    })
+  },
+  addLevelTest(level: string | null) {
+    update((s) => ({ ...s, levelTests: [...s.levelTests, { at: Date.now(), level }] }))
   },
   setSettings(patch: Partial<Settings>) {
     update((s) => ({ ...s, settings: { ...s.settings, ...patch } }))

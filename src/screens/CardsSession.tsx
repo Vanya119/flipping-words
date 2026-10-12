@@ -55,7 +55,7 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
     const id = current.id
     const first = !(id in results)
     // В режиме повторения: оцениваем первую попытку, а также успешное повторение после ошибки
-    if (mode === 'due' && (first || ok)) actions.gradeWord(id, ok)
+    actions.review(id, ok, mode === 'due' && (first || ok))
     if (first) setResults((r) => ({ ...r, [id]: ok }))
     if (!ok) setQueue((q) => [...q, id])
     setFlipped(false)
@@ -308,6 +308,11 @@ function Back({ word, direction }: { word: Word; direction: Direction }) {
     <Face>
       <div className="mb-1 text-[16px] text-hint">{isEn ? word.en : word.ru}</div>
       <div className="text-[34px] leading-tight font-bold break-words">{isEn ? word.ru : word.en}</div>
+      {word.forms && (
+        <div className="mt-2 text-[18px] font-medium text-accent">
+          {word.en} – {word.forms.join(' – ')}
+        </div>
+      )}
       <SpeakButton text={word.en} />
       {word.example && <div className="mt-5 text-[15px] text-hint italic">{word.example}</div>}
       {word.note && <div className="mt-3 rounded-xl bg-bg px-3 py-2 text-[14px]">{word.note}</div>}

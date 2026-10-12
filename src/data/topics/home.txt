@@ -1,0 +1,40 @@
+apartment|квартира
+ceiling|потолок
+floor|пол, этаж
+wall|стена
+roof|крыша
+stairs|лестница
+balcony|балкон
+garden|сад
+garage|гараж
+hallway|прихожая
+bedroom|спальня
+living room|гостиная
+sofa|диван
+armchair|кресло
+wardrobe|шкаф для одежды
+shelf|полка
+mirror|зеркало
+carpet|ковёр
+curtain|штора
+pillow|подушка
+blanket|одеяло
+sheet|простыня
+lamp|лампа
+fridge|холодильник
+oven|духовка
+sink|раковина
+tap|кран
+dishwasher|посудомоечная машина
+washing machine|стиральная машина
+vacuum cleaner|пылесос
+kettle|чайник
+plate|тарелка
+cup|чашка
+fork|вилка
+spoon|ложка
+knife|нож
+key|ключ
+rent|арендная плата
+landlord|арендодатель
+tidy up|прибираться

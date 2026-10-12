@@ -3,11 +3,12 @@ import { pack, unpack } from './codec'
 import { BOT_USERNAME } from './config'
 import type { Deck } from './types'
 
-type SharedWord = [en: string, ru: string, example?: string, note?: string]
+/** forms — «went|gone» для неправильных глаголов. */
+type SharedWord = [en: string, ru: string, example?: string, note?: string, forms?: string]
 
 export interface SharedDeck {
   name: string
-  words: { en: string; ru: string; example?: string; note?: string }[]
+  words: { en: string; ru: string; example?: string; note?: string; forms?: [string, string] }[]
 }
 
 /** Лимит Telegram на параметр startapp. */
@@ -16,7 +17,7 @@ const CODE_PREFIX = 'FW1:'
 
 function encode(deck: Deck): string {
   const words: SharedWord[] = deck.words.map((w) => {
-    const row: SharedWord = [w.en, w.ru, w.example ?? '', w.note ?? '']
+    const row: SharedWord = [w.en, w.ru, w.example ?? '', w.note ?? '', w.forms ? w.forms.join('|') : '']
     while (row.length > 2 && !row[row.length - 1]) row.pop()
     return row
   })
@@ -29,7 +30,16 @@ function decode(encoded: string): SharedDeck | null {
     if (typeof raw.n !== 'string' || !Array.isArray(raw.w)) return null
     const words = raw.w
       .filter((r) => Array.isArray(r) && typeof r[0] === 'string' && typeof r[1] === 'string')
-      .map(([en, ru, example, note]) => ({ en, ru, example: example || undefined, note: note || undefined }))
+      .map(([en, ru, example, note, forms]) => {
+        const f = forms?.split('|')
+        return {
+          en,
+          ru,
+          example: example || undefined,
+          note: note || undefined,
+          forms: f?.length === 2 ? (f as [string, string]) : undefined,
+        }
+      })
     return { name: raw.n, words }
   } catch {
     return null

@@ -6,9 +6,16 @@ import { CardsSession } from './screens/CardsSession'
 import { DeckForm } from './screens/DeckForm'
 import { DeckScreen } from './screens/DeckScreen'
 import { Home } from './screens/Home'
+import { FormsSession } from './screens/FormsSession'
 import { ImportScreen } from './screens/ImportScreen'
+import { LevelTest } from './screens/LevelTest'
+import { LibraryScreen } from './screens/LibraryScreen'
+import { LibrarySetScreen } from './screens/LibrarySetScreen'
+import { MatchSession } from './screens/MatchSession'
 import { QuizSession } from './screens/QuizSession'
 import { ShareScreen } from './screens/ShareScreen'
+import { StatsScreen } from './screens/StatsScreen'
+import { TypingSession } from './screens/TypingSession'
 import { WordForm } from './screens/WordForm'
 import { initStore, needsInitialSync } from './store'
 import { inTelegram, startParam, tg } from './telegram'
@@ -46,6 +53,20 @@ function Screen({ route }: { route: Route }) {
       return <ShareScreen deckId={route.deckId} />
     case 'import':
       return <ImportScreen code={route.code} />
+    case 'library':
+      return <LibraryScreen kind={route.kind} />
+    case 'librarySet':
+      return <LibrarySetScreen setId={route.setId} />
+    case 'levelTest':
+      return <LevelTest />
+    case 'stats':
+      return <StatsScreen />
+    case 'typing':
+      return <TypingSession deckId={route.deckId} />
+    case 'match':
+      return <MatchSession deckId={route.deckId} />
+    case 'forms':
+      return <FormsSession deckId={route.deckId} />
   }
 }
 

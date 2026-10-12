@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { IconCards, IconQuiz, IconSearch, IconShare } from '../components/icons'
+import { IconCards, IconForms, IconKeyboard, IconPairs, IconQuiz, IconSearch, IconShare } from '../components/icons'
 import { MainButton } from '../components/MainButton'
 import { Cell, Empty, LevelDots, Page, Section, Segmented, Tile } from '../components/ui'
 import { IconBook } from '../components/icons'
@@ -21,6 +21,7 @@ export function DeckScreen({ deckId }: { deckId: string }) {
   const q = norm(query)
   const words = q ? deck.words.filter((w) => norm(w.en).includes(q) || norm(w.ru).includes(q)) : deck.words
   const hasWords = deck.words.length > 0
+  const hasForms = deck.words.some((w) => w.forms)
 
   return (
     <Page>
@@ -39,7 +40,7 @@ export function DeckScreen({ deckId }: { deckId: string }) {
 
       {hasWords ? (
         <>
-          <div className="mb-3 flex gap-2.5">
+          <div className="mb-3 grid grid-cols-3 gap-2.5">
             <Tile
               icon={<IconCards />}
               label="Карточки"
@@ -47,6 +48,9 @@ export function DeckScreen({ deckId }: { deckId: string }) {
               onClick={() => push({ name: 'cards', deckId, mode: due > 0 ? 'due' : 'all' })}
             />
             <Tile icon={<IconQuiz />} label="Тест" onClick={() => push({ name: 'quiz', deckId })} />
+            <Tile icon={<IconKeyboard />} label="Ввод" onClick={() => push({ name: 'typing', deckId })} />
+            <Tile icon={<IconPairs />} label="Пары" onClick={() => push({ name: 'match', deckId })} />
+            {hasForms && <Tile icon={<IconForms />} label="Формы" onClick={() => push({ name: 'forms', deckId })} />}
             <Tile icon={<IconShare />} label="Поделиться" onClick={() => push({ name: 'share', deckId })} />
           </div>
           <div className="mb-6">
@@ -79,7 +83,7 @@ export function DeckScreen({ deckId }: { deckId: string }) {
             {words.map((w) => (
               <Cell
                 key={w.id}
-                title={w.en}
+                title={w.forms ? `${w.en} – ${w.forms.join(' – ')}` : w.en}
                 subtitle={w.ru}
                 after={<LevelDots box={w.box} />}
                 onClick={() => push({ name: 'word', deckId, wordId: w.id })}

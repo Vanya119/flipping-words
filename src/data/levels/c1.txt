@@ -1,0 +1,128 @@
+abundant|изобильный
+accelerate|ускорять
+accountability|подотчётность
+adverse|неблагоприятный
+advent|появление, приход
+allegation|обвинение
+allocate|распределять
+ambiguous|двусмысленный
+amend|вносить поправки
+analogy|аналогия
+arbitrary|произвольный
+articulate|чётко выражать
+ascertain|выяснять
+aspiration|стремление
+attain|достигать (цели)
+authentic|аутентичный
+bureaucracy|бюрократия
+coherent|связный
+coincide|совпадать
+commence|начинать(ся)
+commodity|товар
+compelling|неотразимый, убедительный
+complacent|самодовольный
+comply|соблюдать
+comprehensive|всесторонний
+compromise|компромисс
+conceive|задумывать
+concise|сжатый
+confine|ограничивать пределами
+conscientious|добросовестный
+consensus|консенсус
+constitute|составлять
+contemplate|размышлять
+contend|утверждать, бороться
+convey|передавать
+credible|заслуживающий доверия
+cumbersome|громоздкий
+deduce|выводить, заключать
+deficiency|дефицит, недостаток
+deliberate|намеренный
+depict|изображать
+deteriorate|ухудшаться
+deter|удерживать, отпугивать
+detrimental|вредный
+devise|придумывать
+diminish|уменьшаться
+discrepancy|расхождение
+disperse|рассеивать
+disrupt|нарушать
+distort|искажать
+elaborate|подробный, разрабатывать
+elicit|выявлять, вызывать
+embark|приступать
+endorse|одобрять
+enhance|усиливать, улучшать
+entail|влечь за собой
+exacerbate|усугублять
+explicit|недвусмысленный
+facilitate|содействовать
+feasible|осуществимый
+fluctuate|колебаться (о ценах)
+foster|способствовать
+formidable|грозный
+fragile|хрупкий
+gauge|измерять, оценивать
+hamper|препятствовать
+hinder|мешать
+hypothesis|гипотеза
+implicit|подразумеваемый
+incentive|стимул
+incompatible|несовместимый
+inherent|присущий
+inhibit|подавлять
+integrity|честность, целостность
+intricate|запутанный
+intuitive|интуитивный
+invoke|ссылаться, вызывать
+jeopardise|ставить под угрозу
+leverage|рычаг влияния
+lucrative|прибыльный
+mediate|посредничать
+meticulous|дотошный
+mitigate|смягчать последствия
+notion|понятие
+notorious|печально известный
+novice|новичок
+obsolete|устаревший
+offset|уравновешивать
+ongoing|продолжающийся
+paradigm|парадигма
+paramount|первостепенный
+perpetual|вечный
+pertinent|уместный
+plausible|правдоподобный
+pragmatic|прагматичный
+precede|предшествовать
+predominant|преобладающий
+prerequisite|предпосылка
+prevalent|распространённый
+profound|глубокий
+proliferation|распространение
+prominent|выдающийся
+prospect|перспектива
+provoke|провоцировать
+redundant|избыточный
+reinforce|укреплять
+relevant|актуальный
+resilient|стойкий
+rigorous|строгий
+scrutiny|тщательная проверка
+simultaneous|одновременный
+sceptical|скептический
+solely|исключительно
+speculate|рассуждать, спекулировать
+stem from|происходить из
+subsequent|последующий
+subtle|едва заметный, тонкий
+supplement|дополнение
+susceptible|восприимчивый
+tangible|ощутимый
+tedious|утомительный
+transparent|прозрачный
+trivial|тривиальный
+undermine|подрывать
+unprecedented|беспрецедентный
+viable|жизнеспособный
+vulnerable|уязвимый
+whereas|тогда как

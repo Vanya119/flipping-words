@@ -1,0 +1,143 @@
+airport|аэропорт
+ticket|билет
+passport|паспорт
+hotel|гостиница
+journey|поездка
+map|карта
+bag|сумка
+village|деревня
+mountain|гора
+river|река
+beach|пляж
+island|остров
+forest|лес
+season|время года
+spring|весна
+summer|лето
+autumn|осень
+winter|зима
+cloud|облако
+snow|снег
+wind|ветер
+neighbour|сосед
+guest|гость
+uncle|дядя
+aunt|тётя
+cousin|двоюродный брат, сестра
+husband|муж
+wife|жена
+grandmother|бабушка
+grandfather|дедушка
+wedding|свадьба
+party|вечеринка
+present|подарок
+invite|приглашать
+visit|посещать
+travel|путешествовать
+arrive|прибывать
+leave|уезжать, оставлять
+return|возвращаться
+wait|ждать
+send|отправлять
+carry|нести
+choose|выбирать
+decide|решать
+remember|помнить
+forget|забывать
+explain|объяснять
+understand|понимать
+learn|учить, узнавать
+teach|преподавать
+borrow|брать взаймы
+lend|давать взаймы
+pay|платить
+cost|стоить
+sell|продавать
+spend|тратить
+save|экономить, спасать
+price|цена
+cheap|дешёвый
+expensive|дорогой
+market|рынок
+restaurant|ресторан
+menu|меню
+bill|счёт
+vegetable|овощ
+fruit|фрукт
+cheese|сыр
+chicken|курица
+rice|рис
+soup|суп
+sugar|сахар
+salt|соль
+hungry|голодный
+thirsty|испытывающий жажду
+tired|уставший
+ill|больной
+healthy|здоровый
+medicine|лекарство
+hospital|больница
+pain|боль
+dangerous|опасный
+safe|безопасный
+quiet|тихий
+noisy|шумный
+busy|занятой
+free|свободный, бесплатный
+empty|пустой
+full|полный
+early|рано
+late|поздно
+quick|быстрый
+slow|медленный
+strong|сильный
+weak|слабый
+tall|высокий
+short|короткий, низкий
+heavy|тяжёлый
+dark|тёмный
+clean|чистый
+dirty|грязный
+dry|сухой
+wet|мокрый
+interesting|интересный
+boring|скучный
+funny|смешной
+friendly|дружелюбный
+kind|добрый
+polite|вежливый
+angry|злой, сердитый
+afraid|испуганный
+worried|обеспокоенный
+excited|взволнованный
+surprised|удивлённый
+hobby|хобби
+film|фильм
+newspaper|газета
+magazine|журнал
+message|сообщение
+computer|компьютер
+office|офис
+meeting|встреча
+company|компания
+factory|завод
+team|команда
+game|игра
+competition|соревнование
+win|побеждать
+lose|проигрывать, терять
+exam|экзамен
+mistake|ошибка
+idea|идея
+plan|план
+problem|проблема
+reason|причина
+way|путь, способ
+dream|мечта, сон
+future|будущее
+past|прошлое
+always|всегда
+never|никогда
+sometimes|иногда
+often|часто
+usually|обычно

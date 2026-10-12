@@ -1,4 +1,5 @@
 import { createContext, useContext } from 'react'
+import type { LibraryKind } from './library'
 
 export type Route =
   | { name: 'home' }
@@ -9,6 +10,13 @@ export type Route =
   | { name: 'quiz'; deckId?: string }
   | { name: 'share'; deckId: string }
   | { name: 'import'; code?: string }
+  | { name: 'library'; kind: LibraryKind }
+  | { name: 'librarySet'; setId: string }
+  | { name: 'levelTest' }
+  | { name: 'stats' }
+  | { name: 'typing'; deckId?: string }
+  | { name: 'match'; deckId?: string }
+  | { name: 'forms'; deckId?: string }
 
 export interface Router {
   route: Route

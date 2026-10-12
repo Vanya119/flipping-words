@@ -105,7 +105,7 @@ export function QuizSession({ deckId }: { deckId?: string }) {
       haptic.error()
     }
     // Ошибка всегда сбрасывает слово; верный ответ двигает его, только если пора было повторять
-    if (!ok || isDue(q.word)) actions.gradeWord(q.word.id, ok)
+    actions.review(q.word.id, ok, !ok || isDue(q.word))
   }
 
   return (

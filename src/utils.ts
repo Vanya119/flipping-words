@@ -17,3 +17,39 @@ export function shuffle<T>(arr: T[]): T[] {
 }
 
 export const norm = (s: string) => s.trim().toLowerCase()
+
+function levenshtein(a: string, b: string) {
+  const dp = Array.from({ length: b.length + 1 }, (_, j) => j)
+  for (let i = 1; i <= a.length; i++) {
+    let prev = dp[0]
+    dp[0] = i
+    for (let j = 1; j <= b.length; j++) {
+      const tmp = dp[j]
+      dp[j] = Math.min(dp[j] + 1, dp[j - 1] + 1, prev + (a[i - 1] === b[j - 1] ? 0 : 1))
+      prev = tmp
+    }
+  }
+  return dp[b.length]
+}
+
+const clean = (s: string) =>
+  s
+    .toLowerCase()
+    .replace(/[’`]/g, "'")
+    .replace(/[.,!?;:"()]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .replace(/^to /, '')
+
+/**
+ * Сравнивает введённый ответ с правильным. Варианты через «/» (learnt/learned) равноправны.
+ * Одна опечатка в слове от 4 букв засчитывается, но помечается как 'typo'.
+ */
+export function checkAnswer(input: string, expected: string): 'exact' | 'typo' | 'wrong' {
+  const given = clean(input)
+  if (!given) return 'wrong'
+  const variants = expected.split('/').map(clean)
+  if (variants.includes(given)) return 'exact'
+  if (variants.some((v) => v.length >= 4 && levenshtein(given, v) <= 1)) return 'typo'
+  return 'wrong'
+}

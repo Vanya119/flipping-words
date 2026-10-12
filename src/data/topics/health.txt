@@ -1,0 +1,40 @@
+body|тело
+face|лицо
+neck|шея
+shoulder|плечо
+arm|рука
+finger|палец
+leg|нога
+knee|колено
+foot|ступня
+back|спина
+stomach|живот, желудок
+heart|сердце
+blood|кровь
+bone|кость
+skin|кожа
+tooth|зуб
+ear|ухо
+nose|нос
+headache|головная боль
+fever|жар, температура
+flu|грипп
+sore throat|боль в горле
+allergy|аллергия
+wound|рана
+bruise|синяк
+prescription|рецепт врача
+pill|таблетка
+pharmacy|аптека
+dentist|стоматолог
+nurse|медсестра
+appointment|приём (у врача)
+symptom|симптом
+treatment|лечение
+recover|выздоравливать
+sneeze|чихать
+breathe|дышать
+exercise|упражнение
+diet|диета
+rest|отдых
+check-up|медосмотр

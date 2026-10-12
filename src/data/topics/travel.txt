@@ -1,0 +1,40 @@
+luggage|багаж
+suitcase|чемодан
+boarding pass|посадочный талон
+flight|рейс
+departure|отправление
+arrival|прибытие
+delay|задержка
+gate|выход на посадку
+customs|таможня
+visa|виза
+reservation|бронь
+check-in|регистрация
+layover|пересадка
+destination|пункт назначения
+sightseeing|осмотр достопримечательностей
+guidebook|путеводитель
+souvenir|сувенир
+tourist|турист
+hostel|хостел
+receptionist|администратор
+single room|одноместный номер
+double room|двухместный номер
+view|вид
+currency|валюта
+exchange rate|обменный курс
+platform|платформа
+timetable|расписание
+return ticket|билет туда и обратно
+one-way ticket|билет в одну сторону
+backpack|рюкзак
+crew|экипаж
+passenger|пассажир
+seat belt|ремень безопасности
+aisle|проход
+window seat|место у окна
+jet lag|смена часовых поясов
+cruise|круиз
+abroad|за границей
+itinerary|маршрут
+landmark|достопримечательность

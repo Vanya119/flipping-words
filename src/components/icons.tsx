@@ -87,3 +87,60 @@ export const IconFlip = ({ size = 18 }) => (
     <path d="M3 12a9 9 0 0 1 15.5-6.2L21 8M21 3v5h-5M21 12a9 9 0 0 1-15.5 6.2L3 16M3 21v-5h5" />
   </svg>
 )
+
+export const IconLevels = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <path d="M4 20h4v-5H4zM10 20h4V10h-4zM16 20h4V4h-4z" />
+  </svg>
+)
+
+export const IconTopics = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <rect x="3" y="3" width="7.5" height="7.5" rx="2" />
+    <rect x="13.5" y="3" width="7.5" height="7.5" rx="2" />
+    <rect x="3" y="13.5" width="7.5" height="7.5" rx="2" />
+    <rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2" />
+  </svg>
+)
+
+export const IconVerbs = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <path d="M4 7h13l-3-3M20 17H7l3 3" />
+  </svg>
+)
+
+export const IconTarget = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <circle cx="12" cy="12" r="9" />
+    <circle cx="12" cy="12" r="5" />
+    <circle cx="12" cy="12" r="1" fill="currentColor" />
+  </svg>
+)
+
+export const IconChart = ({ size = 22 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <path d="M3 3v18h18" />
+    <path d="m7 15 4-4 3 3 6-7" />
+  </svg>
+)
+
+export const IconKeyboard = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <rect x="2.5" y="6" width="19" height="12" rx="2.5" />
+    <path d="M6.5 10h.01M10 10h.01M13.5 10h.01M17 10h.01M8 14h8" />
+  </svg>
+)
+
+export const IconPairs = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <rect x="3" y="4" width="7" height="6" rx="1.5" />
+    <rect x="14" y="14" width="7" height="6" rx="1.5" />
+    <path d="M10 7h3a2 2 0 0 1 2 2v5" />
+  </svg>
+)
+
+export const IconForms = ({ size = 26 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+    <path d="M4 6h4M10 6h4M16 6h4M4 12h4M10 12h4M16 12h4M4 18h4M10 18h4M16 18h4" />
+  </svg>
+)
