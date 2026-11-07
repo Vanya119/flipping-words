@@ -1,133 +1,30 @@
-aberration|отклонение от нормы
-abhor|питать отвращение
-acquiesce|молча соглашаться
-acrimonious|язвительный
-admonish|делать выговор
-alleviate|облегчать
-ameliorate|улучшать положение
-anachronism|анахронизм
-antithesis|противоположность
 apathy|апатия
-appease|умиротворять
-assiduous|усердный
-audacious|дерзкий
-austere|суровый
 banal|банальный
-belligerent|воинственный
-benevolent|доброжелательный
-bolster|подкреплять
 candid|откровенный
-capricious|капризный
-castigate|сурово критиковать
-circumvent|обходить
-clandestine|тайный
-cogent|веский
-complicit|причастный, соучастный
 conundrum|головоломка
-copious|обильный
-corroborate|подтверждать
-culminate|достигать кульминации
-cursory|беглый
-dearth|скудость
-debilitate|ослаблять
-decry|порицать
-deference|почтение
-deleterious|пагубный
-denounce|осуждать
-deride|высмеивать
-desultory|бессистемный
-didactic|назидательный
 diligent|прилежный
-disparage|принижать
-disparity|неравенство
-dogmatic|догматичный
-ebullient|кипучий
 eclectic|эклектичный
-efficacy|действенность
-egregious|вопиющий
 eloquent|красноречивый
 elusive|неуловимый
-emulate|подражать
 enigmatic|загадочный
-ephemeral|мимолётный
-equanimity|невозмутимость
-equivocal|уклончивый
-erroneous|ошибочный
-esoteric|эзотерический
 euphemism|эвфемизм
-exacting|требовательный
-exculpate|снимать вину
-exemplary|образцовый
-exonerate|реабилитировать
-expedient|целесообразный
-fastidious|привередливый
-fervent|пылкий
-fortuitous|случайный
 frugal|бережливый
 futile|тщетный
 gregarious|общительный
-hackneyed|избитый
-harbinger|предвестник
-hubris|высокомерие
-idiosyncrasy|причуда
 impeccable|безупречный
-impetuous|импульсивный
 incessant|непрекращающийся
-incongruous|неуместный
-indolent|ленивый
-ineffable|невыразимый
 innocuous|безобидный
 insatiable|ненасытный
-intransigent|непримиримый
-inundate|наводнять
-irrevocable|бесповоротный
-juxtapose|сопоставлять
-laconic|лаконичный
 lethargic|вялый
-loquacious|болтливый
-magnanimous|великодушный
-malleable|податливый
-mercurial|переменчивый
-mollify|успокаивать
 mundane|обыденный
-nefarious|гнусный
 nonchalant|беззаботный
-obfuscate|запутывать
-obsequious|подобострастный
-ostensible|мнимый
-ostracise|подвергать остракизму
-paucity|недостаточность
 penchant|склонность
-perfunctory|поверхностный
-pernicious|губительный
-perspicacious|проницательный
-platitude|банальность
-polemic|полемика
 precarious|шаткий
-proclivity|наклонность
-prodigious|громадный
-propensity|предрасположенность
-quandary|затруднение
 quintessential|квинтэссенциальный
-rancour|злоба
-recalcitrant|непокорный
-reticent|сдержанный
-sanguine|оптимистичный
-scrupulous|щепетильный
 serendipity|счастливая случайность
-spurious|ложный
-superfluous|излишний
-surreptitious|скрытный
 tenacious|упорный
-trepidation|трепет
 ubiquitous|вездесущий
-unequivocal|однозначный
-vehement|яростный
-venerate|почитать
-verbose|многословный
-vindicate|доказывать правоту
 volatile|изменчивый
-zealous|рьяный
 a blessing in disguise|не было бы счастья, да несчастье помогло
 a far cry from|совсем не то, что
 abrasive|резкий, грубоватый (о манерах)
@@ -307,3 +204,110 @@ whimsical|причудливый
 wistful|задумчиво-тоскливый
 wrath|гнев
 zest|задор
+a can of worms|осиное гнездо (проблем)
+a double-edged sword|палка о двух концах
+against the grain|против течения
+an acquired taste|на любителя
+back to square one|опять с нуля
+barking up the wrong tree|идти по ложному следу
+bend over backwards|из кожи вон лезть
+bite the bullet|стиснуть зубы и сделать
+bite your tongue|прикусить язык
+burn the midnight oil|засиживаться допоздна за работой
+call the shots|принимать решения, командовать
+come full circle|вернуться к исходной точке
+cry wolf|поднимать ложную тревогу
+devil's advocate|адвокат дьявола
+dodge a bullet|чудом избежать проблем
+down to earth|простой в общении, приземлённый
+drop the ball|облажаться, упустить
+easier said than done|легко сказать
+face the music|отвечать за последствия
+fly off the handle|вспылить
+get cold feet|струсить в последний момент
+go down the rabbit hole|увлечься и залипнуть
+go with the flow|плыть по течению
+hit the ground running|сразу взяться за дело
+in hot water|в неприятностях
+jump the gun|поторопиться
+keep a low profile|не высовываться
+leave no stone unturned|перепробовать всё
+let the cat out of the bag|проболтаться
+miss the boat|упустить шанс
+move the goalposts|менять правила по ходу игры
+not my cup of tea|не моё, не по душе
+on thin ice|на грани (риска)
+once in a blue moon|очень редко
+over the top|чересчур, перебор
+pull someone's leg|разыгрывать, подшучивать
+rain on someone's parade|испортить кому-то праздник
+ring a bell|напоминать что-то знакомое
+rock the boat|раскачивать лодку
+rub someone the wrong way|раздражать (без явной причины)
+save face|сохранить лицо
+see eye to eye|сходиться во мнениях
+sit tight|ждать на месте
+spill the beans|выболтать секрет
+steal the show|затмить всех
+take with a pinch of salt|относиться скептически
+the ball is in your court|теперь твой ход
+the tip of the iceberg|верхушка айсберга
+through thick and thin|в горе и в радости
+tongue-in-cheek|с иронией, в шутку
+touch and go|неизвестно, чем кончится
+under wraps|в секрете
+up for grabs|доступно любому
+walk on eggshells|ходить на цыпочках (боясь задеть)
+when push comes to shove|в крайнем случае
+wing it|импровизировать
+your call|тебе решать
+the whole nine yards|по полной программе
+nip in the bud|пресечь в зародыше
+red tape|бюрократическая волокита
+food for thought|пища для размышлений
+backhanded compliment|сомнительный комплимент
+bittersweet|горько-сладкий
+cagey|скрытный, уклончивый
+cheesy|банальный, слащавый
+cocky|самоуверенный, дерзкий
+cringeworthy|кринжовый, стыдный
+dicey|рискованный
+flaky|ненадёжный (о человеке)
+gutted|очень расстроенный
+half-hearted|без энтузиазма
+high-maintenance|требующий много внимания
+knackered|выжатый как лимон
+laid-back|расслабленный, спокойный
+level-headed|рассудительный
+low-key|сдержанный, неброский
+mind-boggling|умопомрачительный
+nerve-racking|нервирующий
+nitty-gritty|мелкие детали, суть
+on edge|на взводе
+pushover|бесхарактерный человек
+run-of-the-mill|заурядный
+second nature|вторая натура
+self-deprecating|самоироничный
+short-sighted|недальновидный
+stuck-up|заносчивый
+tight-lipped|не раскрывающий подробностей
+toxic|токсичный
+two-faced|двуличный
+underwhelming|не впечатляющий
+up-and-coming|перспективный
+wishy-washy|невнятный
+word of mouth|сарафанное радио
+worn out|вымотанный, изношенный
+wholeheartedly|всем сердцем
+hustle|суета, крутиться
+fluke|случайная удача
+gimmick|уловка, трюк
+glitch|сбой, глюк
+hype|шумиха, хайп
+jinx|сглазить
+loophole|лазейка
+mishap|неприятный инцидент
+shambles|полный бардак
+snub|игнорировать, пренебрегать
+splurge|потратиться (на себя)
+upshot|итог, результат

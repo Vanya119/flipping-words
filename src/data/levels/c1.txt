@@ -1,131 +1,51 @@
-abundant|изобильный
-accelerate|ускорять
-accountability|подотчётность
-adverse|неблагоприятный
-advent|появление, приход
-allegation|обвинение
-allocate|распределять
 ambiguous|двусмысленный
-amend|вносить поправки
-analogy|аналогия
-arbitrary|произвольный
-articulate|чётко выражать
-ascertain|выяснять
-aspiration|стремление
-attain|достигать (цели)
 authentic|аутентичный
 bureaucracy|бюрократия
-coherent|связный
 coincide|совпадать
-commence|начинать(ся)
-commodity|товар
 compelling|неотразимый, убедительный
 complacent|самодовольный
-comply|соблюдать
 comprehensive|всесторонний
 compromise|компромисс
-conceive|задумывать
 concise|сжатый
-confine|ограничивать пределами
-conscientious|добросовестный
-consensus|консенсус
-constitute|составлять
 contemplate|размышлять
-contend|утверждать, бороться
 convey|передавать
 credible|заслуживающий доверия
 cumbersome|громоздкий
-deduce|выводить, заключать
-deficiency|дефицит, недостаток
 deliberate|намеренный
-depict|изображать
-deteriorate|ухудшаться
-deter|удерживать, отпугивать
-detrimental|вредный
-devise|придумывать
-diminish|уменьшаться
-discrepancy|расхождение
-disperse|рассеивать
 disrupt|нарушать
-distort|искажать
 elaborate|подробный, разрабатывать
-elicit|выявлять, вызывать
-embark|приступать
-endorse|одобрять
 enhance|усиливать, улучшать
-entail|влечь за собой
-exacerbate|усугублять
-explicit|недвусмысленный
-facilitate|содействовать
 feasible|осуществимый
-fluctuate|колебаться (о ценах)
-foster|способствовать
-formidable|грозный
 fragile|хрупкий
-gauge|измерять, оценивать
-hamper|препятствовать
-hinder|мешать
-hypothesis|гипотеза
-implicit|подразумеваемый
 incentive|стимул
-incompatible|несовместимый
-inherent|присущий
-inhibit|подавлять
 integrity|честность, целостность
 intricate|запутанный
 intuitive|интуитивный
-invoke|ссылаться, вызывать
-jeopardise|ставить под угрозу
 leverage|рычаг влияния
 lucrative|прибыльный
-mediate|посредничать
 meticulous|дотошный
-mitigate|смягчать последствия
-notion|понятие
 notorious|печально известный
 novice|новичок
 obsolete|устаревший
-offset|уравновешивать
 ongoing|продолжающийся
-paradigm|парадигма
-paramount|первостепенный
-perpetual|вечный
-pertinent|уместный
 plausible|правдоподобный
 pragmatic|прагматичный
-precede|предшествовать
-predominant|преобладающий
-prerequisite|предпосылка
-prevalent|распространённый
 profound|глубокий
-proliferation|распространение
 prominent|выдающийся
-prospect|перспектива
 provoke|провоцировать
 redundant|избыточный
-reinforce|укреплять
 relevant|актуальный
 resilient|стойкий
-rigorous|строгий
-scrutiny|тщательная проверка
-simultaneous|одновременный
 sceptical|скептический
-solely|исключительно
 speculate|рассуждать, спекулировать
-stem from|происходить из
-subsequent|последующий
 subtle|едва заметный, тонкий
-supplement|дополнение
-susceptible|восприимчивый
 tangible|ощутимый
 tedious|утомительный
 transparent|прозрачный
 trivial|тривиальный
-undermine|подрывать
 unprecedented|беспрецедентный
 viable|жизнеспособный
 vulnerable|уязвимый
-whereas|тогда как
 adamant|непреклонный
 backlash|негативная реакция
 bear in mind|иметь в виду
@@ -299,3 +219,88 @@ in retrospect|оглядываясь назад
 undertake|предпринимать
 unanimous|единогласный
 versatile|разносторонний
+a bit of a stretch|натяжка, преувеличение
+across the board|повсеместно, для всех
+ahead of the curve|на шаг впереди
+all over the place|в беспорядке, сумбурно
+at a loss|в растерянности
+at stake|на кону
+back out|отказаться (от договорённости)
+ballpark figure|примерная цифра
+bite off more than you can chew|взять на себя слишком много
+blow up|вспылить, раздуть
+bottom line|суть, итог
+bounce back|быстро восстановиться
+call it a day|закончить на сегодня
+catch on|становиться популярным
+chip in|скинуться
+clear-cut|чёткий, однозначный
+come up against|столкнуться с
+cut someone some slack|быть снисходительным к кому-то
+double-check|перепроверить
+drag on|затягиваться
+draw the line|провести черту
+fair enough|справедливо, ладно
+fall out with|поссориться с
+fill someone in|ввести в курс дела
+first-hand|из первых рук
+get the hang of|освоиться, наловчиться
+get to the point|перейти к сути
+give someone the benefit of the doubt|поверить на слово
+go the extra mile|сделать больше, чем требуется
+gut feeling|чутьё
+hands down|бесспорно
+hit it off|сразу поладить
+in the long run|в долгосрочной перспективе
+iron out|уладить (мелкие проблемы)
+jump to conclusions|делать поспешные выводы
+keep someone posted|держать в курсе
+know-how|умение, ноу-хау
+last-minute|в последний момент
+learning curve|период освоения
+let off steam|выпустить пар
+lose track of|потерять счёт, сбиться
+make the most of|извлечь максимум из
+miss the point|не понять сути
+no-brainer|очевидное решение
+off the record|не для протокола
+on second thought|подумав ещё раз
+out of the blue|как гром среди ясного неба
+pull it off|провернуть, справиться
+rule of thumb|эмпирическое правило
+second-guess|сомневаться задним числом
+sink in|дойти (о смысле)
+sit on the fence|занимать нейтральную позицию
+sleep on it|отложить решение до утра
+speak up|высказаться
+spot on|в точку
+step up|взять на себя больше
+stick to|придерживаться
+take a toll on|сказаться (негативно)
+take it easy|не напрягаться
+take sides|занимать чью-то сторону
+the last straw|последняя капля
+think outside the box|мыслить нестандартно
+touch base|созвониться, свериться
+trade-off|размен, компромиссный выбор
+under the weather|неважно себя чувствовать
+up in the air|ещё не решено
+upfront|заранее, сразу
+water under the bridge|дело прошлое
+wear off|проходить (о действии)
+worst-case scenario|худший сценарий
+wishful thinking|принятие желаемого за действительное
+burn bridges|сжигать мосты
+in the loop|в курсе событий
+on the same page|на одной волне
+play it by ear|действовать по обстоятельствам
+cut to the chase|перейти к делу
+get on someone's nerves|действовать на нервы
+a long shot|маловероятный вариант
+grey area|серая зона
+have second thoughts|засомневаться
+hold your horses|не торопись
+keep an eye on|присматривать за
+long story short|короче говоря
+put your foot down|проявить твёрдость
+read between the lines|читать между строк
