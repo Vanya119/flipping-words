@@ -3,6 +3,7 @@ import { cloudLoad, cloudSave } from './cloud'
 import { dayKey, grade, LEARNED_BOX } from './srs'
 import { cloudStorageAvailable, userId } from './telegram'
 import type { AppData, Deck, Settings, Word } from './types'
+import { norm } from './utils'
 
 const LOCAL_KEY = `fw_data_${userId() ?? 'guest'}`
 
@@ -97,6 +98,12 @@ export function useData() {
 
 export const getData = () => state
 
+/** source колоды «На изучение», куда откладываются незнакомые слова. */
+export const STUDY_SOURCE = 'study'
+export const STUDY_NAME = 'На изучение'
+
+export const isStudyDeck = (d: Deck) => d.source === STUDY_SOURCE
+
 export const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
 
 const mapDeck = (deckId: string, fn: (d: Deck) => Deck) =>
@@ -146,6 +153,31 @@ export const actions = {
   },
   addLevelTest(level: string | null) {
     update((s) => ({ ...s, levelTests: [...s.levelTests, { at: Date.now(), level }] }))
+  },
+  /**
+   * Переносит слова из их колод в «На изучение» (создаёт её первой в списке при необходимости).
+   * Прогресс сбрасывается — слово начинает учиться заново. Возвращает число перенесённых слов.
+   */
+  moveToStudy(wordIds: string[]): number {
+    const ids = new Set(wordIds)
+    let moved = 0
+    update((s) => {
+      const moving: Word[] = []
+      let decks = s.decks.map((d) =>
+        isStudyDeck(d) || !d.words.some((w) => ids.has(w.id))
+          ? d
+          : { ...d, words: d.words.filter((w) => (ids.has(w.id) ? (moving.push(w), false) : true)) },
+      )
+      const now = Date.now()
+      const study = decks.find(isStudyDeck)
+      const have = new Set(study?.words.map((w) => norm(w.en)))
+      const fresh = moving.filter((w) => !have.has(norm(w.en))).map((w) => ({ ...w, box: 0, due: now }))
+      moved = moving.length
+      if (study) decks = decks.map((d) => (d === study ? { ...d, words: [...fresh, ...d.words] } : d))
+      else if (fresh.length) decks = [{ id: uid(), name: STUDY_NAME, createdAt: now, source: STUDY_SOURCE, words: fresh }, ...decks]
+      return { ...s, decks }
+    })
+    return moved
   },
   setSettings(patch: Partial<Settings>) {
     update((s) => ({ ...s, settings: { ...s.settings, ...patch } }))

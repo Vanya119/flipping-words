@@ -1,17 +1,18 @@
 import { animate, motion, useMotionValue, useTransform } from 'motion/react'
 import { type ReactNode, type RefObject, useEffect, useMemo, useRef, useState } from 'react'
-import { IconCards, IconCheck, IconFlip, IconSpeaker, IconX } from '../components/icons'
+import { IconBookmark, IconCards, IconCheck, IconFlip, IconSpeaker, IconX } from '../components/icons'
 import { MainButton } from '../components/MainButton'
 import { SessionResult } from '../components/SessionResult'
+import { toast } from '../components/Toast'
 import { Empty, Page } from '../components/ui'
 import { useRouter } from '../router'
 import { poolWords, SESSION_LIMIT } from '../session'
 import { speak, speechSupported } from '../speech'
 import { isDue } from '../srs'
-import { actions, getData, useData } from '../store'
+import { actions, getData, isStudyDeck, STUDY_NAME, useData } from '../store'
 import { haptic } from '../telegram'
 import type { Direction, Word } from '../types'
-import { shuffle } from '../utils'
+import { plural, shuffle } from '../utils'
 
 const SWIPE_DISTANCE = 100
 const SWIPE_VELOCITY = 500
@@ -36,11 +37,16 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
   const [results, setResults] = useState<Record<string, boolean>>({})
   /** Улетающая анимация текущей карточки — её регистрирует SwipeCard. */
   const flyRef = useRef<((ok: boolean) => void) | null>(null)
+  /** Текущую карточку откладывают в «На изучение», а не просто отвечают «не знаю». */
+  const shelving = useRef(false)
+  const [shelvedAll, setShelvedAll] = useState(false)
 
   const byId = useMemo(() => new Map(poolWords(data, deckId).map((w) => [w.id, w] as const)), [data, deckId])
   const current = byId.get(queue[pos])
   const next = byId.get(queue[pos + 1])
   const done = pos >= queue.length
+  const studyIds = useMemo(() => new Set(data.decks.filter(isStudyDeck).flatMap((d) => d.words.map((w) => w.id))), [data])
+  const canShelve = !!current && !studyIds.has(current.id)
 
   // Слово удалили во время сессии — пропускаем
   useEffect(() => {
@@ -49,11 +55,29 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
 
   const answer = (ok: boolean) => flyRef.current?.(ok)
 
+  const shelve = () => {
+    if (!canShelve || !flyRef.current) return
+    shelving.current = true
+    flyRef.current(false)
+  }
+
   /** Карточка улетела — записываем ответ и показываем следующую. */
   const commit = (ok: boolean) => {
     if (!current) return
     const id = current.id
     const first = !(id in results)
+    if (shelving.current) {
+      shelving.current = false
+      actions.review(id, false, false)
+      if (first) setResults((r) => ({ ...r, [id]: false }))
+      actions.moveToStudy([id])
+      toast(`«${current.en}» → ${STUDY_NAME}`)
+      // Отложенное слово больше не показываем в этой сессии
+      setQueue((q) => q.filter((x, i) => i <= pos || x !== id))
+      setFlipped(false)
+      setPos((p) => p + 1)
+      return
+    }
     // В режиме повторения: оцениваем первую попытку, а также успешное повторение после ошибки
     actions.review(id, ok, mode === 'due' && (first || ok))
     if (first) setResults((r) => ({ ...r, [id]: ok }))
@@ -103,10 +127,30 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
   if (done) {
     const values = Object.values(results)
     const correct = values.filter(Boolean).length
+    // Незнакомые слова, которые ещё не лежат в «На изучение»
+    const allIds = new Set(data.decks.flatMap((d) => d.words.map((w) => w.id)))
+    const unknown = Object.keys(results).filter((id) => !results[id] && allIds.has(id) && !studyIds.has(id))
+    const shelveUnknown = () => {
+      const n = actions.moveToStudy(unknown)
+      haptic.success()
+      toast(`${n} ${plural(n, 'слово перенесено', 'слова перенесено', 'слов перенесено')} в «${STUDY_NAME}»`)
+      setShelvedAll(true)
+    }
     return (
       <SessionResult
         correct={correct}
         wrong={values.length - correct}
+        extra={
+          unknown.length > 0 && !shelvedAll ? (
+            <button
+              className="pressable mt-5 flex w-full max-w-xs items-center justify-center gap-2 rounded-xl bg-section px-4 py-3 text-[15px] font-medium text-link"
+              onClick={shelveUnknown}
+            >
+              <IconBookmark size={20} />
+              Отложить незнакомые: {unknown.length}
+            </button>
+          ) : undefined
+        }
         onRepeat={() => replace({ name: 'cards', deckId, mode: 'all' })}
         onDone={back}
       />
@@ -146,14 +190,20 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
         )}
       </div>
 
-      <div className="mt-6 flex items-center justify-center gap-8">
+      <div className="mt-6 flex items-center justify-center gap-5">
         <RoundButton tone="danger" label="Не знаю" onClick={() => answer(false)}>
           <IconX />
         </RoundButton>
-        <button className="pressable flex flex-col items-center gap-1 text-hint" onClick={flip}>
+        <button className="pressable flex w-16 flex-col items-center gap-1 text-hint" onClick={flip}>
           <IconFlip size={22} />
           <span className="text-[12px]">Перевернуть</span>
         </button>
+        {canShelve && (
+          <button className="pressable flex w-16 flex-col items-center gap-1 text-link" onClick={shelve} aria-label={`Отложить в «${STUDY_NAME}»`}>
+            <IconBookmark size={22} />
+            <span className="text-[12px]">Отложить</span>
+          </button>
+        )}
         <RoundButton tone="success" label="Знаю" onClick={() => answer(true)}>
           <IconCheck />
         </RoundButton>

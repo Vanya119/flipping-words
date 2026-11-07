@@ -5,7 +5,7 @@ import { Cell, Empty, LevelDots, Page, Section, Segmented, Tile } from '../compo
 import { IconBook } from '../components/icons'
 import { useRouter } from '../router'
 import { dueCount } from '../srs'
-import { actions, useData } from '../store'
+import { actions, isStudyDeck, useData } from '../store'
 import { haptic } from '../telegram'
 import type { Direction } from '../types'
 import { norm, plural } from '../utils'
@@ -93,7 +93,15 @@ export function DeckScreen({ deckId }: { deckId: string }) {
           </Section>
         </>
       ) : (
-        <Empty icon={<IconBook />} title="Пока пусто" text="Добавь первые слова — и можно начинать тренировку." />
+        <Empty
+          icon={<IconBook />}
+          title="Пока пусто"
+          text={
+            isStudyDeck(deck)
+              ? 'Сюда попадают слова, отложенные кнопкой «Отложить» в карточках.'
+              : 'Добавь первые слова — и можно начинать тренировку.'
+          }
+        />
       )}
 
       <MainButton text="Добавить слово" onClick={() => push({ name: 'word', deckId })} />

@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react'
-import { IconChart, IconDownload, IconLevels, IconPlus, IconTarget, IconTopics, IconVerbs } from '../components/icons'
+import { IconBookmark, IconChart, IconDownload, IconLevels, IconPlus, IconTarget, IconTopics, IconVerbs } from '../components/icons'
 import { MainButton } from '../components/MainButton'
 import { Cell, Page, Section } from '../components/ui'
 import { getSet } from '../library'
 import { useRouter } from '../router'
 import { dueCount, LEARNED_BOX } from '../srs'
-import { useData } from '../store'
+import { isStudyDeck, useData } from '../store'
 import { plural } from '../utils'
 
 function BigTile({ icon, title, subtitle, onClick }: { icon: ReactNode; title: string; subtitle: string; onClick: () => void }) {
@@ -83,6 +83,7 @@ export function Home() {
             return (
               <Cell
                 key={d.id}
+                before={isStudyDeck(d) ? <span className="text-link"><IconBookmark filled /></span> : undefined}
                 title={d.name}
                 subtitle={`${d.words.length} ${plural(d.words.length, 'слово', 'слова', 'слов')}`}
                 after={n > 0 ? <span className="rounded-full bg-button px-2 py-0.5 text-[13px] font-semibold text-button-text">{n}</span> : undefined}

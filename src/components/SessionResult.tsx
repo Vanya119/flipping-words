@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import type { ReactNode } from 'react'
 import { IconParty } from './icons'
 import { MainButton } from './MainButton'
 import { Page } from './ui'
@@ -13,6 +14,7 @@ export function SessionResult({
   correct,
   wrong,
   items,
+  extra,
   onRepeat,
   onDone,
 }: {
@@ -20,6 +22,8 @@ export function SessionResult({
   wrong: number
   /** Свои плитки вместо «с первого раза / с ошибкой». */
   items?: StatItem[]
+  /** Дополнительные действия под плитками. */
+  extra?: ReactNode
   onRepeat?: () => void
   onDone: () => void
 }) {
@@ -51,6 +55,7 @@ export function SessionResult({
           </div>
         ))}
       </div>
+      {extra}
       {onRepeat && (
         <button className="pressable mt-6 text-[16px] text-link" onClick={onRepeat}>
           Ещё раз

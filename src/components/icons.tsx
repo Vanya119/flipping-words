@@ -144,3 +144,9 @@ export const IconForms = ({ size = 26 }) => (
     <path d="M4 6h4M10 6h4M16 6h4M4 12h4M10 12h4M16 12h4M4 18h4M10 18h4M16 18h4" />
   </svg>
 )
+
+export const IconBookmark = ({ size = 22, filled = false }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" {...base} fill={filled ? 'currentColor' : 'none'}>
+    <path d="M6 3.5h12a1 1 0 0 1 1 1V21l-7-4.5L5 21V4.5a1 1 0 0 1 1-1z" />
+  </svg>
+)
