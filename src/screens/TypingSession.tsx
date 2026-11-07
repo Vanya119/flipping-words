@@ -9,8 +9,8 @@ import { getData } from '../store'
 
 const SIZE = 15
 
-function buildTasks(deckId?: string): TypedTask[] {
-  return pickForPractice(poolWords(getData(), deckId), SIZE).map((word) => ({
+function buildTasks(deckId?: string, shelved?: boolean): TypedTask[] {
+  return pickForPractice(poolWords(getData(), deckId, shelved), SIZE).map((word) => ({
     word,
     hint: word.en.split('/')[0],
     prompt: (
@@ -23,9 +23,9 @@ function buildTasks(deckId?: string): TypedTask[] {
   }))
 }
 
-export function TypingSession({ deckId }: { deckId?: string }) {
+export function TypingSession({ deckId, shelved }: { deckId?: string; shelved?: boolean }) {
   const { back, replace } = useRouter()
-  const [tasks] = useState(() => buildTasks(deckId))
+  const [tasks] = useState(() => buildTasks(deckId, shelved))
 
   if (tasks.length === 0) {
     return (
@@ -36,5 +36,5 @@ export function TypingSession({ deckId }: { deckId?: string }) {
     )
   }
 
-  return <TypedSession tasks={tasks} onRepeat={() => replace({ name: 'typing', deckId })} onDone={back} />
+  return <TypedSession tasks={tasks} onRepeat={() => replace({ name: 'typing', deckId, shelved })} onDone={back} />
 }

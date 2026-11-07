@@ -13,6 +13,8 @@ export interface Word {
   lapses?: number
   /** Формы неправильного глагола: Past Simple и Past Participle. */
   forms?: [string, string]
+  /** Отложено «на изучение» — попадает в стопку отложенных своей колоды. */
+  shelved?: boolean
 }
 
 export interface Deck {

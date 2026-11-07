@@ -9,7 +9,7 @@ import { useRouter } from '../router'
 import { poolWords, SESSION_LIMIT } from '../session'
 import { speak, speechSupported } from '../speech'
 import { isDue } from '../srs'
-import { actions, getData, isStudyDeck, STUDY_NAME, useData } from '../store'
+import { actions, getData, useData } from '../store'
 import { haptic } from '../telegram'
 import type { Direction, Word } from '../types'
 import { plural, shuffle } from '../utils'
@@ -17,27 +17,27 @@ import { plural, shuffle } from '../utils'
 const SWIPE_DISTANCE = 100
 const SWIPE_VELOCITY = 500
 
-function buildQueue(deckId: string | undefined, mode: 'due' | 'all') {
-  const pool = poolWords(getData(), deckId)
+function buildQueue(deckId: string | undefined, mode: 'due' | 'all', shelved?: boolean) {
+  const pool = poolWords(getData(), deckId, shelved)
   const list = mode === 'due' ? pool.filter((w) => isDue(w)) : pool
   return shuffle(list)
     .slice(0, SESSION_LIMIT)
     .map((w) => w.id)
 }
 
-export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 'all' }) {
+export function CardsSession({ deckId, mode, shelved }: { deckId?: string; mode: 'due' | 'all'; shelved?: boolean }) {
   const data = useData()
   const { back, replace } = useRouter()
   const direction = data.settings.direction
 
-  const [queue, setQueue] = useState(() => buildQueue(deckId, mode))
+  const [queue, setQueue] = useState(() => buildQueue(deckId, mode, shelved))
   const [pos, setPos] = useState(0)
   const [flipped, setFlipped] = useState(false)
   /** Результат первой попытки по каждому слову. */
   const [results, setResults] = useState<Record<string, boolean>>({})
   /** Улетающая анимация текущей карточки — её регистрирует SwipeCard. */
   const flyRef = useRef<((ok: boolean) => void) | null>(null)
-  /** Текущую карточку откладывают в «На изучение», а не просто отвечают «не знаю». */
+  /** Текущую карточку откладывают в стопку, а не просто отвечают «не знаю». */
   const shelving = useRef(false)
   const [shelvedAll, setShelvedAll] = useState(false)
 
@@ -45,8 +45,6 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
   const current = byId.get(queue[pos])
   const next = byId.get(queue[pos + 1])
   const done = pos >= queue.length
-  const studyIds = useMemo(() => new Set(data.decks.filter(isStudyDeck).flatMap((d) => d.words.map((w) => w.id))), [data])
-  const canShelve = !!current && !studyIds.has(current.id)
 
   // Слово удалили во время сессии — пропускаем
   useEffect(() => {
@@ -55,8 +53,16 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
 
   const answer = (ok: boolean) => flyRef.current?.(ok)
 
-  const shelve = () => {
-    if (!canShelve || !flyRef.current) return
+  /** Неотложенное слово улетает в стопку; уже отложенное — убирается из неё без ответа. */
+  const toggleShelf = () => {
+    if (!current) return
+    if (current.shelved) {
+      actions.setShelved([current.id], false)
+      haptic.select()
+      toast(`«${current.en}» убрано из отложенных`)
+      return
+    }
+    if (!flyRef.current) return
     shelving.current = true
     flyRef.current(false)
   }
@@ -70,8 +76,8 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
       shelving.current = false
       actions.review(id, false, false)
       if (first) setResults((r) => ({ ...r, [id]: false }))
-      actions.moveToStudy([id])
-      toast(`«${current.en}» → ${STUDY_NAME}`)
+      actions.setShelved([id], true)
+      toast(`«${current.en}» отложено`)
       // Отложенное слово больше не показываем в этой сессии
       setQueue((q) => q.filter((x, i) => i <= pos || x !== id))
       setFlipped(false)
@@ -113,10 +119,14 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
         {mode === 'due' ? (
           <Empty icon={<IconCards size={56} />} title="Всё повторено" text="Слов к повторению сейчас нет. Можно потренировать все слова — это не повлияет на расписание." />
         ) : (
-          <Empty icon={<IconCards size={56} />} title="Нет слов" text="Добавь слова в колоду, чтобы тренироваться." />
+          <Empty
+            icon={<IconCards size={56} />}
+            title={shelved ? 'Нет отложенных слов' : 'Нет слов'}
+            text={shelved ? 'Отложи слово кнопкой «Отложить» в карточках.' : 'Добавь слова в колоду, чтобы тренироваться.'}
+          />
         )}
-        {mode === 'due' && poolWords(data, deckId).length > 0 ? (
-          <MainButton text="Тренировать все слова" onClick={() => replace({ name: 'cards', deckId, mode: 'all' })} />
+        {mode === 'due' && poolWords(data, deckId, shelved).length > 0 ? (
+          <MainButton text="Тренировать все слова" onClick={() => replace({ name: 'cards', deckId, mode: 'all', shelved })} />
         ) : (
           <MainButton text="Назад" onClick={back} />
         )}
@@ -127,13 +137,12 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
   if (done) {
     const values = Object.values(results)
     const correct = values.filter(Boolean).length
-    // Незнакомые слова, которые ещё не лежат в «На изучение»
-    const allIds = new Set(data.decks.flatMap((d) => d.words.map((w) => w.id)))
-    const unknown = Object.keys(results).filter((id) => !results[id] && allIds.has(id) && !studyIds.has(id))
+    // Незнакомые слова, которые ещё не отложены
+    const unknown = Object.keys(results).filter((id) => !results[id] && byId.get(id) && !byId.get(id)!.shelved)
     const shelveUnknown = () => {
-      const n = actions.moveToStudy(unknown)
+      actions.setShelved(unknown, true)
       haptic.success()
-      toast(`${n} ${plural(n, 'слово перенесено', 'слова перенесено', 'слов перенесено')} в «${STUDY_NAME}»`)
+      toast(`${unknown.length} ${plural(unknown.length, 'слово отложено', 'слова отложено', 'слов отложено')}`)
       setShelvedAll(true)
     }
     return (
@@ -151,7 +160,7 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
             </button>
           ) : undefined
         }
-        onRepeat={() => replace({ name: 'cards', deckId, mode: 'all' })}
+        onRepeat={() => replace({ name: 'cards', deckId, mode: 'all', shelved })}
         onDone={back}
       />
     )
@@ -198,12 +207,10 @@ export function CardsSession({ deckId, mode }: { deckId?: string; mode: 'due' | 
           <IconFlip size={22} />
           <span className="text-[12px]">Перевернуть</span>
         </button>
-        {canShelve && (
-          <button className="pressable flex w-16 flex-col items-center gap-1 text-link" onClick={shelve} aria-label={`Отложить в «${STUDY_NAME}»`}>
-            <IconBookmark size={22} />
-            <span className="text-[12px]">Отложить</span>
-          </button>
-        )}
+        <button className="pressable flex w-16 flex-col items-center gap-1 text-link" onClick={toggleShelf}>
+          <IconBookmark size={22} filled={current?.shelved} />
+          <span className="text-[12px]">{current?.shelved ? 'Убрать' : 'Отложить'}</span>
+        </button>
         <RoundButton tone="success" label="Знаю" onClick={() => answer(true)}>
           <IconCheck />
         </RoundButton>

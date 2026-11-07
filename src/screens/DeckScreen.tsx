@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import { IconCards, IconForms, IconKeyboard, IconPairs, IconQuiz, IconSearch, IconShare } from '../components/icons'
+import { IconBookmark, IconSearch, IconShare } from '../components/icons'
+import { PracticeTiles } from '../components/PracticeTiles'
 import { MainButton } from '../components/MainButton'
 import { Cell, Empty, LevelDots, Page, Section, Segmented, Tile } from '../components/ui'
 import { IconBook } from '../components/icons'
 import { useRouter } from '../router'
 import { dueCount } from '../srs'
-import { actions, isStudyDeck, useData } from '../store'
+import { actions, useData } from '../store'
 import { haptic } from '../telegram'
 import type { Direction } from '../types'
 import { norm, plural } from '../utils'
@@ -21,7 +22,8 @@ export function DeckScreen({ deckId }: { deckId: string }) {
   const q = norm(query)
   const words = q ? deck.words.filter((w) => norm(w.en).includes(q) || norm(w.ru).includes(q)) : deck.words
   const hasWords = deck.words.length > 0
-  const hasForms = deck.words.some((w) => w.forms)
+  const shelvedWords = deck.words.filter((w) => w.shelved)
+  const shelvedDue = dueCount(shelvedWords)
 
   return (
     <Page>
@@ -40,19 +42,27 @@ export function DeckScreen({ deckId }: { deckId: string }) {
 
       {hasWords ? (
         <>
-          <div className="mb-3 grid grid-cols-3 gap-2.5">
-            <Tile
-              icon={<IconCards />}
-              label="Карточки"
-              badge={due}
-              onClick={() => push({ name: 'cards', deckId, mode: due > 0 ? 'due' : 'all' })}
-            />
-            <Tile icon={<IconQuiz />} label="Тест" onClick={() => push({ name: 'quiz', deckId })} />
-            <Tile icon={<IconKeyboard />} label="Ввод" onClick={() => push({ name: 'typing', deckId })} />
-            <Tile icon={<IconPairs />} label="Пары" onClick={() => push({ name: 'match', deckId })} />
-            {hasForms && <Tile icon={<IconForms />} label="Формы" onClick={() => push({ name: 'forms', deckId })} />}
+          <PracticeTiles deckId={deckId} words={deck.words}>
             <Tile icon={<IconShare />} label="Поделиться" onClick={() => push({ name: 'share', deckId })} />
-          </div>
+          </PracticeTiles>
+          <Section>
+            <Cell
+              before={<span className="text-link"><IconBookmark filled={shelvedWords.length > 0} /></span>}
+              title="Отложенные"
+              subtitle={
+                shelvedWords.length
+                  ? `${shelvedWords.length} ${plural(shelvedWords.length, 'слово', 'слова', 'слов')} · тренируй отдельно`
+                  : 'Отложи незнакомое слово в карточках'
+              }
+              after={
+                shelvedDue > 0 ? (
+                  <span className="rounded-full bg-button px-2 py-0.5 text-[13px] font-semibold text-button-text">{shelvedDue}</span>
+                ) : undefined
+              }
+              chevron
+              onClick={() => push({ name: 'shelved', deckId })}
+            />
+          </Section>
           <div className="mb-6">
             <Segmented<Direction>
               value={settings.direction}
@@ -85,7 +95,12 @@ export function DeckScreen({ deckId }: { deckId: string }) {
                 key={w.id}
                 title={w.forms ? `${w.en} – ${w.forms.join(' – ')}` : w.en}
                 subtitle={w.ru}
-                after={<LevelDots box={w.box} />}
+                after={
+                  <span className="flex items-center gap-2">
+                    {w.shelved && <span className="text-link"><IconBookmark size={16} filled /></span>}
+                    <LevelDots box={w.box} />
+                  </span>
+                }
                 onClick={() => push({ name: 'word', deckId, wordId: w.id })}
               />
             ))}
@@ -96,11 +111,7 @@ export function DeckScreen({ deckId }: { deckId: string }) {
         <Empty
           icon={<IconBook />}
           title="Пока пусто"
-          text={
-            isStudyDeck(deck)
-              ? 'Сюда попадают слова, отложенные кнопкой «Отложить» в карточках.'
-              : 'Добавь первые слова — и можно начинать тренировку.'
-          }
+          text="Добавь первые слова — и можно начинать тренировку."
         />
       )}
 

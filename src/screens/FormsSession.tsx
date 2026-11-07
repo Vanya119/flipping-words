@@ -9,8 +9,8 @@ import { getData } from '../store'
 
 const SIZE = 15
 
-function buildTasks(deckId?: string): TypedTask[] {
-  const verbs = poolWords(getData(), deckId).filter((w) => w.forms)
+function buildTasks(deckId?: string, shelved?: boolean): TypedTask[] {
+  const verbs = poolWords(getData(), deckId, shelved).filter((w) => w.forms)
   return pickForPractice(verbs, SIZE).map((word) => ({
     word,
     hint: word.forms![0].split('/')[0],
@@ -28,9 +28,9 @@ function buildTasks(deckId?: string): TypedTask[] {
   }))
 }
 
-export function FormsSession({ deckId }: { deckId?: string }) {
+export function FormsSession({ deckId, shelved }: { deckId?: string; shelved?: boolean }) {
   const { back, replace } = useRouter()
-  const [tasks] = useState(() => buildTasks(deckId))
+  const [tasks] = useState(() => buildTasks(deckId, shelved))
 
   if (tasks.length === 0) {
     return (
@@ -41,5 +41,5 @@ export function FormsSession({ deckId }: { deckId?: string }) {
     )
   }
 
-  return <TypedSession tasks={tasks} onRepeat={() => replace({ name: 'forms', deckId })} onDone={back} />
+  return <TypedSession tasks={tasks} onRepeat={() => replace({ name: 'forms', deckId, shelved })} onDone={back} />
 }

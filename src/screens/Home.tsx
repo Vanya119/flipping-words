@@ -5,7 +5,7 @@ import { Cell, Page, Section } from '../components/ui'
 import { getSet } from '../library'
 import { useRouter } from '../router'
 import { dueCount, LEARNED_BOX } from '../srs'
-import { isStudyDeck, useData } from '../store'
+import { useData } from '../store'
 import { plural } from '../utils'
 
 function BigTile({ icon, title, subtitle, onClick }: { icon: ReactNode; title: string; subtitle: string; onClick: () => void }) {
@@ -27,6 +27,8 @@ export function Home() {
   const allWords = decks.flatMap((d) => d.words)
   const due = dueCount(allWords, now)
   const learned = allWords.filter((w) => w.box >= LEARNED_BOX).length
+  const shelved = allWords.filter((w) => w.shelved)
+  const shelvedDue = dueCount(shelved, now)
   const lastTest = levelTests[levelTests.length - 1]
   const lastLevel = lastTest ? (lastTest.level ? getSet(lastTest.level)?.badge : 'ниже A1') : null
 
@@ -76,6 +78,23 @@ export function Home() {
         <BigTile icon={<IconVerbs />} title="Глаголы" subtitle="Неправильные и фразовые" onClick={() => push({ name: 'library', kind: 'verbs' })} />
       </div>
 
+      {shelved.length > 0 && (
+        <Section>
+          <Cell
+            before={<span className="text-link"><IconBookmark filled /></span>}
+            title="Отложенные"
+            subtitle={`${shelved.length} ${plural(shelved.length, 'слово', 'слова', 'слов')} из всех колод`}
+            after={
+              shelvedDue > 0 ? (
+                <span className="rounded-full bg-button px-2 py-0.5 text-[13px] font-semibold text-button-text">{shelvedDue}</span>
+              ) : undefined
+            }
+            chevron
+            onClick={() => push({ name: 'shelved' })}
+          />
+        </Section>
+      )}
+
       {decks.length > 0 && (
         <Section title="Мои колоды">
           {decks.map((d) => {
@@ -83,7 +102,6 @@ export function Home() {
             return (
               <Cell
                 key={d.id}
-                before={isStudyDeck(d) ? <span className="text-link"><IconBookmark filled /></span> : undefined}
                 title={d.name}
                 subtitle={`${d.words.length} ${plural(d.words.length, 'слово', 'слова', 'слов')}`}
                 after={n > 0 ? <span className="rounded-full bg-button px-2 py-0.5 text-[13px] font-semibold text-button-text">{n}</span> : undefined}

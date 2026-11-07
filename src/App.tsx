@@ -14,9 +14,11 @@ import { LibrarySetScreen } from './screens/LibrarySetScreen'
 import { MatchSession } from './screens/MatchSession'
 import { QuizSession } from './screens/QuizSession'
 import { ShareScreen } from './screens/ShareScreen'
+import { ShelvedScreen } from './screens/ShelvedScreen'
 import { StatsScreen } from './screens/StatsScreen'
 import { TypingSession } from './screens/TypingSession'
 import { WordForm } from './screens/WordForm'
+import { migrateLegacyStudy } from './migrate'
 import { initStore, needsInitialSync } from './store'
 import { inTelegram, startParam, tg } from './telegram'
 
@@ -46,9 +48,9 @@ function Screen({ route }: { route: Route }) {
     case 'word':
       return <WordForm deckId={route.deckId} wordId={route.wordId} />
     case 'cards':
-      return <CardsSession deckId={route.deckId} mode={route.mode} />
+      return <CardsSession deckId={route.deckId} shelved={route.shelved} mode={route.mode} />
     case 'quiz':
-      return <QuizSession deckId={route.deckId} />
+      return <QuizSession deckId={route.deckId} shelved={route.shelved} />
     case 'share':
       return <ShareScreen deckId={route.deckId} />
     case 'import':
@@ -59,14 +61,16 @@ function Screen({ route }: { route: Route }) {
       return <LibrarySetScreen setId={route.setId} />
     case 'levelTest':
       return <LevelTest />
+    case 'shelved':
+      return <ShelvedScreen deckId={route.deckId} />
     case 'stats':
       return <StatsScreen />
     case 'typing':
-      return <TypingSession deckId={route.deckId} />
+      return <TypingSession deckId={route.deckId} shelved={route.shelved} />
     case 'match':
-      return <MatchSession deckId={route.deckId} />
+      return <MatchSession deckId={route.deckId} shelved={route.shelved} />
     case 'forms':
-      return <FormsSession deckId={route.deckId} />
+      return <FormsSession deckId={route.deckId} shelved={route.shelved} />
   }
 }
 
@@ -79,6 +83,8 @@ export function App() {
     // Не держим пользователя дольше пары секунд, даже если облако тормозит
     const timeout = setTimeout(() => setSyncing(false), 3000)
     initStore().finally(() => {
+      // Старая общая колода «На изучение» → стопки отложенных в колодах
+      migrateLegacyStudy()
       clearTimeout(timeout)
       setSyncing(false)
     })

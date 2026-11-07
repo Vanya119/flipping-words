@@ -98,11 +98,8 @@ export function useData() {
 
 export const getData = () => state
 
-/** source колоды «На изучение», куда откладываются незнакомые слова. */
-export const STUDY_SOURCE = 'study'
-export const STUDY_NAME = 'На изучение'
-
-export const isStudyDeck = (d: Deck) => d.source === STUDY_SOURCE
+/** source старой общей колоды «На изучение» (до появления стопок отложенных в колодах). */
+const LEGACY_STUDY_SOURCE = 'study'
 
 export const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8)
 
@@ -155,29 +152,50 @@ export const actions = {
     update((s) => ({ ...s, levelTests: [...s.levelTests, { at: Date.now(), level }] }))
   },
   /**
-   * Переносит слова из их колод в «На изучение» (создаёт её первой в списке при необходимости).
-   * Прогресс сбрасывается — слово начинает учиться заново. Возвращает число перенесённых слов.
+   * Откладывает слова в стопку их колоды. Прогресс сбрасывается — слово учится заново.
+   * С on = false убирает пометку.
    */
-  moveToStudy(wordIds: string[]): number {
+  setShelved(wordIds: string[], on: boolean) {
     const ids = new Set(wordIds)
-    let moved = 0
+    const now = Date.now()
+    update((s) => ({
+      ...s,
+      decks: s.decks.map((d) =>
+        d.words.some((w) => ids.has(w.id))
+          ? {
+              ...d,
+              words: d.words.map((w) => (ids.has(w.id) ? (on ? { ...w, shelved: true, box: 0, due: now } : { ...w, shelved: false }) : w)),
+            }
+          : d,
+      ),
+    }))
+  },
+  /**
+   * Разбирает старую колоду «На изучение»: слова возвращаются в колоды, откуда пришли
+   * (resolve возвращает id колоды или null), с пометкой «отложено». Нераспознанные слова
+   * остаются в бывшей колоде «На изучение», которая становится обычной.
+   */
+  migrateLegacyStudy(resolve: (w: Word) => string | null) {
+    const legacy = state.decks.find((d) => d.source === LEGACY_STUDY_SOURCE)
+    if (!legacy) return
     update((s) => {
-      const moving: Word[] = []
-      let decks = s.decks.map((d) =>
-        isStudyDeck(d) || !d.words.some((w) => ids.has(w.id))
-          ? d
-          : { ...d, words: d.words.filter((w) => (ids.has(w.id) ? (moving.push(w), false) : true)) },
-      )
-      const now = Date.now()
-      const study = decks.find(isStudyDeck)
-      const have = new Set(study?.words.map((w) => norm(w.en)))
-      const fresh = moving.filter((w) => !have.has(norm(w.en))).map((w) => ({ ...w, box: 0, due: now }))
-      moved = moving.length
-      if (study) decks = decks.map((d) => (d === study ? { ...d, words: [...fresh, ...d.words] } : d))
-      else if (fresh.length) decks = [{ id: uid(), name: STUDY_NAME, createdAt: now, source: STUDY_SOURCE, words: fresh }, ...decks]
+      const back = new Map<string, Word[]>()
+      const rest: Word[] = []
+      for (const w of legacy.words) {
+        const target = resolve(w)
+        const word = { ...w, shelved: true }
+        if (target) back.set(target, [...(back.get(target) ?? []), word])
+        else rest.push(word)
+      }
+      const decks = s.decks
+        .map((d) => {
+          if (d.id === legacy.id) return rest.length ? { ...d, source: undefined, words: rest } : null
+          const add = back.get(d.id)?.filter((w) => !d.words.some((x) => norm(x.en) === norm(w.en)))
+          return add?.length ? { ...d, words: [...d.words, ...add] } : d
+        })
+        .filter((d): d is Deck => d !== null)
       return { ...s, decks }
     })
-    return moved
   },
   setSettings(patch: Partial<Settings>) {
     update((s) => ({ ...s, settings: { ...s.settings, ...patch } }))

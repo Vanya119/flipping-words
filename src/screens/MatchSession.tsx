@@ -16,10 +16,10 @@ const ROUNDS = 3
 const MIN_WORDS = 3
 
 /** Раунды по 5 пар; внутри раунда английские и русские слова не должны повторяться. */
-function buildRounds(deckId?: string): Word[][] {
+function buildRounds(deckId?: string, shelved?: boolean): Word[][] {
   const seenEn = new Set<string>()
   const seenRu = new Set<string>()
-  const unique = pickForPractice(poolWords(getData(), deckId), ROUND_SIZE * ROUNDS * 2).filter((w) => {
+  const unique = pickForPractice(poolWords(getData(), deckId, shelved), ROUND_SIZE * ROUNDS * 2).filter((w) => {
     if (seenEn.has(norm(w.en)) || seenRu.has(norm(w.ru))) return false
     seenEn.add(norm(w.en))
     seenRu.add(norm(w.ru))
@@ -39,9 +39,9 @@ const formatTime = (ms: number) => {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 }
 
-export function MatchSession({ deckId }: { deckId?: string }) {
+export function MatchSession({ deckId, shelved }: { deckId?: string; shelved?: boolean }) {
   const { back, replace } = useRouter()
-  const [rounds] = useState(() => buildRounds(deckId))
+  const [rounds] = useState(() => buildRounds(deckId, shelved))
   const [round, setRound] = useState(0)
   const [right, setRight] = useState<Word[]>(() => shuffle(rounds[0] ?? []))
   const [matched, setMatched] = useState<Set<string>>(new Set())
@@ -80,7 +80,7 @@ export function MatchSession({ deckId }: { deckId?: string }) {
           { value: formatTime(finishedAt - startedAt), label: 'время' },
           { value: mistakes, label: 'ошибок', tone: mistakes ? 'danger' : 'success' },
         ]}
-        onRepeat={() => replace({ name: 'match', deckId })}
+        onRepeat={() => replace({ name: 'match', deckId, shelved })}
         onDone={back}
       />
     )

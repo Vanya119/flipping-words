@@ -6,17 +6,19 @@ export type Route =
   | { name: 'deck'; deckId: string }
   | { name: 'deckForm'; deckId?: string }
   | { name: 'word'; deckId: string; wordId?: string }
-  | { name: 'cards'; deckId?: string; mode: 'due' | 'all' }
-  | { name: 'quiz'; deckId?: string }
+  | { name: 'cards'; deckId?: string; mode: 'due' | 'all'; shelved?: boolean }
+  | { name: 'quiz'; deckId?: string; shelved?: boolean }
   | { name: 'share'; deckId: string }
   | { name: 'import'; code?: string }
   | { name: 'library'; kind: LibraryKind }
   | { name: 'librarySet'; setId: string }
   | { name: 'levelTest' }
   | { name: 'stats' }
-  | { name: 'typing'; deckId?: string }
-  | { name: 'match'; deckId?: string }
-  | { name: 'forms'; deckId?: string }
+  | { name: 'typing'; deckId?: string; shelved?: boolean }
+  | { name: 'match'; deckId?: string; shelved?: boolean }
+  | { name: 'forms'; deckId?: string; shelved?: boolean }
+  /** Стопка отложенных слов колоды (или всех колод без deckId). */
+  | { name: 'shelved'; deckId?: string }
 
 export interface Router {
   route: Route

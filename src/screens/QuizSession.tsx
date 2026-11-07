@@ -22,9 +22,9 @@ interface Question {
   options: string[]
 }
 
-function buildQuiz(deckId: string | undefined, direction: Direction): Question[] | null {
+function buildQuiz(deckId: string | undefined, direction: Direction, shelved?: boolean): Question[] | null {
   const data = getData()
-  const pool = poolWords(data, deckId)
+  const pool = poolWords(data, deckId, shelved)
   const everything = poolWords(data)
   const answerOf = (w: Word) => (direction === 'en-ru' ? w.ru : w.en)
 
@@ -58,10 +58,10 @@ function buildQuiz(deckId: string | undefined, direction: Direction): Question[]
   })
 }
 
-export function QuizSession({ deckId }: { deckId?: string }) {
+export function QuizSession({ deckId, shelved }: { deckId?: string; shelved?: boolean }) {
   const { back, replace } = useRouter()
   const [direction] = useState(() => getData().settings.direction)
-  const [questions] = useState(() => buildQuiz(deckId, direction))
+  const [questions] = useState(() => buildQuiz(deckId, direction, shelved))
   const [idx, setIdx] = useState(0)
   const [chosen, setChosen] = useState<string | null>(null)
   const [score, setScore] = useState(0)
@@ -80,7 +80,7 @@ export function QuizSession({ deckId }: { deckId?: string }) {
 
   if (idx >= questions.length) {
     return (
-      <SessionResult correct={score} wrong={questions.length - score} onRepeat={() => replace({ name: 'quiz', deckId })} onDone={back} />
+      <SessionResult correct={score} wrong={questions.length - score} onRepeat={() => replace({ name: 'quiz', deckId, shelved })} onDone={back} />
     )
   }
 
