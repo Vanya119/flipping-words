@@ -141,3 +141,166 @@ never|никогда
 sometimes|иногда
 often|часто
 usually|обычно
+probably|вероятно
+actually|на самом деле
+already|уже
+still|всё ещё
+yet|ещё (в вопросах и отрицаниях)
+just|только что, просто
+almost|почти
+enough|достаточно
+quite|довольно
+too|слишком
+both|оба
+anyway|в любом случае
+instead|вместо этого
+suddenly|вдруг
+finally|наконец
+once|однажды, один раз
+twice|дважды
+ago|назад (о времени)
+during|во время
+until|до (о времени)
+outside|снаружи, на улице
+inside|внутри
+upstairs|наверху
+downstairs|внизу
+somewhere|где-то
+anywhere|где-нибудь
+everywhere|везде
+nobody|никто
+anything|что-нибудь
+hurry|торопиться
+fall|падать
+break|ломать
+miss|скучать, пропускать
+worry|волноваться
+hope|надеяться
+mean|значить, иметь в виду
+happen|случаться
+change|менять(ся)
+move|двигаться, переезжать
+check|проверять
+order|заказывать
+booking|бронирование
+rent|снимать (жильё)
+share|делиться
+throw|бросать
+catch|ловить
+climb|подниматься, лазить
+ride|ехать (на велосипеде, верхом)
+turn|поворачивать
+cross|переходить (улицу)
+follow|следовать
+join|присоединяться
+enjoy|наслаждаться
+hate|ненавидеть
+seem|казаться
+become|становиться
+grow|расти
+die|умирать
+be born|родиться
+get married|жениться, выйти замуж
+kiss|целовать
+hug|обнимать
+shout|кричать
+promise|обещать
+apologise|извиняться
+congratulate|поздравлять
+recognise|узнавать (кого-то)
+repeat|повторять
+spell|произносить по буквам
+translate|переводить
+noise|шум
+smell|запах, пахнуть
+taste|вкус, пробовать на вкус
+sound|звук, звучать
+voice|голос
+language|язык
+accent|акцент
+conversation|разговор
+chat|болтать
+joke|шутка
+story|история, рассказ
+news|новости
+advert|реклама
+programme|передача
+channel|канал
+video|видео
+camera|фотоаппарат, камера
+battery|батарея, аккумулятор
+charger|зарядка
+Wi-Fi|вай-фай
+online|онлайн, в интернете
+post|публиковать, почта
+text|писать сообщение
+cash|наличные
+coin|монета
+receipt|чек
+discount|скидка
+sale|распродажа
+size|размер
+pocket|карман
+wallet|кошелёк
+umbrella|зонт
+glasses|очки
+ring|кольцо
+toy|игрушка
+pet|домашнее животное
+horse|лошадь
+cow|корова
+building|здание
+floor|этаж
+lift|лифт
+corner|угол
+square|площадь
+traffic|дорожное движение
+traffic jam|пробка
+parking|парковка
+petrol|бензин
+driver|водитель
+accident|авария, несчастный случай
+police|полиция
+ambulance|скорая помощь
+cough|кашель
+hurt|болеть, причинять боль
+sick|плохо (о самочувствии), тошнит
+sleepy|сонный
+awake|не спящий
+alive|живой
+dead|мёртвый
+lucky|везучий
+ready|готовый
+sure|уверен (в чём-то)
+important|важный
+necessary|необходимый
+different|разный, другой
+same|тот же самый
+similar|похожий
+special|особенный
+normal|обычный, нормальный
+strange|странный
+famous|известный
+modern|современный
+comfortable|удобный
+crowded|людный
+lovely|прекрасный, милый
+terrible|ужасный
+awful|отвратительный
+amazing|потрясающий
+wonderful|чудесный
+perfect|идеальный
+correct|правильный
+wrong|неправильный
+true|верный, правдивый
+simple|простой
+hard|трудный, твёрдый
+soft|мягкий
+loud|громкий
+fresh|свежий
+delicious|вкусный
+bottle|бутылка
+box|коробка
+piece|кусок
+half|половина
+pair|пара

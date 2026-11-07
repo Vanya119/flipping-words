@@ -112,6 +112,10 @@ export const actions = {
     update((s) => ({ ...s, decks: [...s.decks, { id, name, createdAt: Date.now(), words, source }] }))
     return id
   },
+  /** Дописывает слова в конец колоды (например, новые слова обновлённого набора). */
+  appendWords(deckId: string, words: Word[]) {
+    mapDeck(deckId, (d) => ({ ...d, words: [...d.words, ...words] }))
+  },
   renameDeck(deckId: string, name: string) {
     mapDeck(deckId, (d) => ({ ...d, name }))
   },

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { IconTarget } from '../components/icons'
 import { MainButton } from '../components/MainButton'
 import { Cell, Page, Section } from '../components/ui'
+import { LEVEL_TEST_WORDS } from '../data/levelTest'
 import { getSet, LEVEL_IDS, type LibraryEntry } from '../library'
 import { useRouter } from '../router'
 import { actions, useData } from '../store'
@@ -11,17 +12,19 @@ import { shuffle } from '../utils'
 import { LevelBadge } from './LibraryScreen'
 
 /** Вопросов на уровень и сколько верных нужно, чтобы перейти дальше. */
-const PER_LEVEL = 5
-const PASS = 4
+const PER_LEVEL = 10
+const PASS = 8
 
 interface Question {
   word: LibraryEntry
   options: string[]
 }
 
+/** Вопросы берутся из маркерных слов уровня, варианты-обманки — из всего уровня. */
 function buildLevel(levelId: string): Question[] {
   const words = getSet(levelId)!.words
-  return shuffle(words)
+  const markers = new Set(LEVEL_TEST_WORDS[levelId])
+  return shuffle(words.filter((w) => markers.has(w.en)))
     .slice(0, PER_LEVEL)
     .map((word) => {
       const wrong = shuffle(words.filter((w) => w.ru !== word.ru))
@@ -73,7 +76,10 @@ export function LevelTest() {
     const total = correct + (ok ? 1 : 0)
     timer.current = setTimeout(() => {
       setChosen(null)
-      if (qIdx + 1 < PER_LEVEL) {
+      const remaining = PER_LEVEL - qIdx - 1
+      // Даже если ответить на все оставшиеся, порог не набрать — уровень не пройден
+      if (total + remaining < PASS) return finish(levelIdx - 1)
+      if (remaining > 0) {
         setCorrect(total)
         setQIdx(qIdx + 1)
         return
@@ -98,7 +104,7 @@ export function LevelTest() {
           </div>
           <h1 className="mb-2 text-[26px] font-bold">Тест на уровень</h1>
           <div className="text-[15px] text-hint">
-            По {PER_LEVEL} слов на каждый уровень, начиная с A1. Ответишь верно на {PASS} из {PER_LEVEL} — переходишь на следующий.
+            По {PER_LEVEL} слов на каждый уровень, начиная с A1. Ответишь верно на {PASS} из {PER_LEVEL} — переходишь на следующий, если ошибок больше — тест заканчивается.
             Если не знаешь слово, жми «Не знаю», чтобы не угадывать. Проходить можно сколько угодно раз — слова каждый раз новые.
           </div>
         </div>

@@ -130,3 +130,185 @@ shoe|туфля, ботинок
 country|страна
 holiday|отпуск, каникулы
 birthday|день рождения
+yes|да
+no|нет
+okay|хорошо, ладно
+excuse me|простите (чтобы обратиться)
+welcome|добро пожаловать
+people|люди
+person|человек
+parents|родители
+children|дети
+boyfriend|парень (молодой человек)
+girlfriend|девушка (подруга)
+flat|квартира
+toilet|туалет
+shower|душ
+key|ключ
+cup|чашка
+glass|стакан
+plate|тарелка
+orange|апельсин
+banana|банан
+potato|картошка
+tomato|помидор
+chocolate|шоколад
+ice cream|мороженое
+pizza|пицца
+sandwich|бутерброд
+cake|торт
+juice|сок
+beer|пиво
+wine|вино
+cafe|кафе
+bar|бар
+supermarket|супермаркет
+bank|банк
+park|парк
+cinema|кинотеатр
+museum|музей
+church|церковь
+station|вокзал, станция
+road|дорога
+bridge|мост
+taxi|такси
+plane|самолёт
+boat|лодка
+left|левый, налево
+right|правый, направо
+here|здесь
+there|там
+near|рядом
+far|далеко
+up|вверх
+down|вниз
+now|сейчас
+later|позже
+soon|скоро
+again|снова
+every day|каждый день
+weekend|выходные
+Monday|понедельник
+Tuesday|вторник
+Wednesday|среда
+Thursday|четверг
+Friday|пятница
+Saturday|суббота
+Sunday|воскресенье
+minute|минута
+second|секунда
+clock|часы (настенные)
+watch|смотреть (фильм, ТВ)
+look|смотреть, глядеть
+hear|слышать
+say|сказать
+tell|рассказывать
+ask|спрашивать
+call|звонить, звать
+meet|встречать(ся)
+give|давать
+take|брать
+put|класть
+get|получать
+make|делать (создавать)
+do|делать
+have|иметь
+need|нуждаться, нужно
+can|мочь, уметь
+think|думать
+feel|чувствовать
+sit|сидеть
+stand|стоять
+walk|гулять, идти пешком
+run|бегать
+swim|плавать
+dance|танцевать
+sing|петь
+cook|готовить (еду)
+wash|мыть
+start|начинать
+stop|останавливать(ся)
+finish|заканчивать
+try|пытаться, пробовать
+use|использовать
+find|находить
+show|показывать
+study|учиться, изучать
+drive|водить машину
+fly|летать
+stay|оставаться
+cry|плакать
+laugh|смеяться
+smile|улыбаться
+nice|приятный, милый
+great|отличный
+fine|в порядке
+cool|классный, прохладный
+favourite|любимый
+young|молодой
+long|длинный
+fast|быстро
+first|первый
+last|последний
+next|следующий
+many|много (исчисляемых)
+much|много (неисчисляемого)
+little|мало, немного
+very|очень
+really|правда, действительно
+also|тоже, также
+only|только
+together|вместе
+alone|один, в одиночестве
+everyone|все (люди)
+something|что-то
+nothing|ничего
+everything|всё
+someone|кто-то
+why|почему
+where|где, куда
+when|когда
+how|как
+what|что
+who|кто
+how much|сколько
+because|потому что
+but|но
+maybe|может быть
+of course|конечно
+colour|цвет
+yellow|жёлтый
+pink|розовый
+brown|коричневый
+grey|серый
+number|номер, число
+address|адрес
+email|электронная почта
+photo|фотография
+picture|картинка
+TV|телевизор
+football|футбол
+song|песня
+dress|платье
+shirt|рубашка
+T-shirt|футболка
+trousers|брюки
+jeans|джинсы
+jacket|куртка
+coat|пальто
+hat|шапка, шляпа
+face|лицо
+hair|волосы
+mouth|рот
+nose|нос
+ear|ухо
+leg|нога
+arm|рука (от плеча)
+body|тело
+afternoon|день (после полудня)
+tonight|сегодня вечером
+homework|домашнее задание
+boss|начальник
+card|карта, открытка
+warm|тёплый
+sea|море

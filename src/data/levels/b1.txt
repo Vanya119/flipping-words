@@ -135,3 +135,172 @@ warn|предупреждать
 whole|целый
 wonder|интересоваться, задаваться вопросом
 worth|стоящий
+though|впрочем, всё-таки
+although|хотя
+however|однако
+otherwise|иначе
+whether|ли (будет ли)
+unless|если не
+instead of|вместо
+besides|кроме того
+eventually|в конце концов
+recently|недавно
+nowadays|в наши дни
+immediately|немедленно
+definitely|определённо
+obviously|очевидно
+exactly|именно, точно
+completely|полностью
+seriously|серьёзно
+honestly|честно говоря
+luckily|к счастью
+unfortunately|к сожалению
+apparently|судя по всему
+basically|по сути
+by the way|кстати
+in fact|фактически
+at least|по крайней мере
+as soon as|как только
+so far|пока что
+on purpose|нарочно
+in time|вовремя
+for a while|какое-то время
+make sense|иметь смысл
+take part|принимать участие
+take care of|заботиться о
+pay attention|обращать внимание
+make a decision|принимать решение
+make friends|подружиться
+keep in touch|поддерживать связь
+get used to|привыкать к
+get lost|заблудиться
+get ready|собираться
+admit|признавать(ся)
+annoy|раздражать
+blame|винить
+bother|беспокоить
+cheat|жульничать, изменять
+doubt|сомневаться
+fit|подходить (по размеру)
+suit|идти (об одежде)
+forgive|прощать
+gain|набирать (вес), получать
+hide|прятать(ся)
+imagine|представлять (себе)
+impress|впечатлять
+judge|судить
+kill|убивать
+lie|лгать
+measure|измерять
+mix|смешивать
+own|владеть
+pack|собирать вещи, упаковывать
+pick|выбирать, срывать
+point|указывать
+pour|наливать
+protect|защищать
+pull|тянуть
+push|толкать
+quit|бросать (работу, привычку)
+reach|добраться, дотянуться
+regret|сожалеть
+remove|удалять, убирать
+repair|ремонтировать
+reply|отвечать
+report|сообщать, доклад
+sign|подписывать, знак
+solve|решать (задачу)
+steal|красть
+store|хранить
+struggle|с трудом справляться
+upset|расстраивать
+waste|тратить впустую
+weigh|весить
+ashamed|пристыжённый
+annoyed|раздражённый
+jealous|ревнивый, завидующий
+lonely|одинокий
+mad|сумасшедший, злой
+relaxed|расслабленный
+scared|напуганный
+shocked|потрясённый
+stressed|в стрессе
+awkward|неловкий
+careful|осторожный
+careless|небрежный
+clever|умный
+crazy|безумный
+silly|глупый
+smart|сообразительный, элегантный
+stupid|тупой
+available|доступный, свободный
+aware|осведомлённый
+common|распространённый, общий
+complicated|сложный
+current|текущий
+extra|дополнительный
+final|окончательный
+huge|огромный
+illegal|незаконный
+independent|независимый
+local|местный
+main|главный
+negative|отрицательный
+positive|положительный
+private|частный, личный
+recent|недавний
+serious|серьёзный
+specific|конкретный
+suitable|подходящий
+typical|типичный
+unusual|необычный
+useful|полезный
+useless|бесполезный
+valuable|ценный
+amount|количество
+attitude|отношение (к чему-то)
+behaviour|поведение
+chance|шанс
+choice|выбор
+condition|условие, состояние
+contact|контакт
+deal|договорённость, сделка
+debt|долг
+detail|деталь, подробность
+difference|разница
+direction|направление
+disease|болезнь
+emotion|эмоция
+entrance|вход
+exit|выход
+fact|факт
+fault|вина
+fun|веселье
+gossip|сплетни
+guide|гид, руководство
+health|здоровье
+income|доход
+issue|вопрос, проблема
+law|закон
+loan|заём, кредит
+matter|иметь значение, дело
+memory|память, воспоминание
+mess|беспорядок
+nature|природа
+neighbourhood|район, окрестности
+period|период
+pressure|давление
+reaction|реакция
+reputation|репутация
+review|отзыв, обзор
+secret|секрет
+situation|ситуация
+society|общество
+stress|стресс
+subject|предмет (учебный)
+system|система
+topic|тема
+truth|правда
+value|ценность
+weight|вес
+youth|молодёжь, юность

@@ -130,3 +130,174 @@ undergo|подвергаться
 vary|различаться
 vital|жизненно важный
 withdraw|снимать, отзывать
+accomplish|выполнять, совершать
+acquaintance|знакомый
+addicted|зависимый
+afterwards|потом, впоследствии
+alongside|наряду с
+amazed|поражённый
+appreciate|ценить, быть благодарным
+argument|спор, аргумент
+arrangement|договорённость
+assignment|задание
+attach|прикреплять
+attend|посещать, присутствовать
+bargain|выгодная покупка
+beg|умолять
+belong|принадлежать
+breakthrough|прорыв
+burnout|выгорание
+cancel|отменять
+casual|повседневный, непринуждённый
+cope|справляться
+cosy|уютный
+count on|рассчитывать на
+crash|авария, сбой
+critical|критический
+cruel|жестокий
+decent|приличный
+delighted|очень довольный
+demanding|требовательный
+depressed|подавленный
+desperate|отчаянный
+devastated|опустошённый (горем)
+dramatically|резко, значительно
+eager|жаждущий, горящий желанием
+embarrassing|неловкий, стыдный
+encounter|сталкиваться
+engaged|помолвленный, занятый
+entitled|имеющий право
+essential|необходимый
+exhausted|измученный
+expertise|экспертные знания
+fairly|довольно, справедливо
+fancy|хотеть, модный
+fed up|сытый по горло
+flatmate|сосед по квартире
+fluent|беглый (о речи)
+frankly|откровенно говоря
+freelance|внештатный, фриланс
+furious|взбешённый
+gorgeous|великолепный
+grab|хватать
+grumpy|ворчливый
+guilty|виноватый
+handle|управляться с
+hardly|едва, почти не
+harsh|резкий, суровый
+hassle|морока, хлопоты
+heartbroken|убитый горем
+hilarious|уморительный
+hint|намёк
+hopefully|надеюсь
+impatient|нетерпеливый
+impressive|впечатляющий
+in charge|главный, ответственный
+indeed|действительно
+inconvenient|неудобный
+insecure|неуверенный в себе
+inspiring|вдохновляющий
+intense|интенсивный
+irritating|раздражающий
+keen|увлечённый
+lately|в последнее время
+leisure|досуг
+lifestyle|образ жизни
+likely|вероятный
+loyal|преданный
+mature|зрелый
+mess up|испортить
+miserable|несчастный
+misunderstanding|недопонимание
+mortgage|ипотека
+nightmare|кошмар
+offended|обиженный
+on behalf of|от имени
+overwhelmed|перегруженный, подавленный
+overall|в целом
+passionate|страстный
+pointless|бессмысленный
+postpone|откладывать
+practical|практичный
+prejudice|предубеждение
+pretty|довольно, симпатичный
+promote|продвигать
+proposal|предложение (деловое)
+punctual|пунктуальный
+qualification|квалификация
+rarely|редко
+reasonable|разумный
+reassure|успокаивать, обнадёживать
+refund|возврат денег
+regardless|несмотря ни на что
+remote|удалённый
+resist|сопротивляться
+responsibility|ответственность
+rumour|слух
+sensible|благоразумный
+setback|неудача
+sincere|искренний
+slightly|слегка
+sophisticated|утончённый, сложный
+spoilt|избалованный
+straightforward|простой, прямолинейный
+subscription|подписка
+supportive|поддерживающий
+suspicious|подозрительный
+tackle|браться за (проблему)
+temporary|временный
+thoroughly|тщательно
+thrilled|в восторге
+tidy|опрятный, аккуратный
+tough|жёсткий, трудный
+trustworthy|заслуживающий доверия
+unbearable|невыносимый
+underestimate|недооценивать
+unemployed|безработный
+upcoming|предстоящий
+urgent|срочный
+vague|расплывчатый
+weird|странный
+whatever|что угодно, неважно
+widespread|широко распространённый
+willing|готовый, желающий
+worthwhile|стоящий (усилий)
+anniversary|годовщина
+appliance|бытовой прибор
+commute|ездить на работу
+complaint|жалоба
+confirm|подтверждать
+consult|консультироваться
+deposit|залог, депозит
+feedback|обратная связь
+fee|плата, взнос
+insurance|страховка
+lecture|лекция
+nap|короткий сон, вздремнуть
+purchase|покупка
+queue|очередь
+reminder|напоминание
+route|маршрут
+shift|смена (рабочая), сдвиг
+smoothly|гладко
+spare|запасной, свободный
+stuck|застрявший
+accommodation|жильё (временное)
+advantage|преимущество
+disadvantage|недостаток
+alternative|альтернатива
+annual|ежегодный
+approximately|приблизительно
+assistance|помощь, содействие
+budget|бюджет
+candidate|кандидат
+consumer|потребитель
+criticise|критиковать
+deadline|крайний срок
+frequently|часто
+gradually|постепенно
+heritage|наследие
+household|домохозяйство
+instance|пример, случай
+nevertheless|тем не менее
+predictable|предсказуемый

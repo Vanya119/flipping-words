@@ -5,7 +5,7 @@ import { useRouter } from '../router'
 import { speak, speechSupported } from '../speech'
 import { actions, useData } from '../store'
 import { haptic } from '../telegram'
-import { plural } from '../utils'
+import { norm, plural } from '../utils'
 import { LevelBadge } from './LibraryScreen'
 
 export function LibrarySetScreen({ setId }: { setId: string }) {
@@ -15,6 +15,17 @@ export function LibrarySetScreen({ setId }: { setId: string }) {
   if (!set) return null
   const existing = decks.find((d) => d.source === set.id)
   const n = set.words.length
+  // Слова, появившиеся в наборе после того, как колоду добавили
+  const missing = existing
+    ? set.words.filter((w) => !existing.words.some((x) => norm(x.en) === norm(w.en)))
+    : []
+
+  const addMissing = () => {
+    if (!existing) return
+    actions.appendWords(existing.id, setToWords({ ...set, words: missing }))
+    haptic.success()
+    replace({ name: 'deck', deckId: existing.id })
+  }
 
   const add = () => {
     const id = actions.createDeck(set.title, setToWords(set), set.id)
@@ -36,7 +47,13 @@ export function LibrarySetScreen({ setId }: { setId: string }) {
 
       <Section
         title="Слова в наборе"
-        footer={existing ? 'Набор уже в твоих колодах.' : 'Набор добавится как обычная колода: можно тренировать, редактировать и удалять слова.'}
+        footer={
+          existing
+            ? missing.length
+              ? `Набор уже в твоих колодах, но в нём появились новые слова: ${missing.length}.`
+              : 'Набор уже в твоих колодах.'
+            : 'Набор добавится как обычная колода: можно тренировать, редактировать и удалять слова.'
+        }
       >
         {set.words.map((w) => (
           <Cell
@@ -49,7 +66,11 @@ export function LibrarySetScreen({ setId }: { setId: string }) {
       </Section>
 
       {existing ? (
-        <MainButton text="Открыть колоду" onClick={() => push({ name: 'deck', deckId: existing.id })} />
+        missing.length ? (
+          <MainButton text={`Добавить новые слова: ${missing.length}`} onClick={addMissing} />
+        ) : (
+          <MainButton text="Открыть колоду" onClick={() => push({ name: 'deck', deckId: existing.id })} />
+        )
       ) : (
         <MainButton text="Добавить в мои колоды" onClick={add} />
       )}

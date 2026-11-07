@@ -128,3 +128,182 @@ verbose|многословный
 vindicate|доказывать правоту
 volatile|изменчивый
 zealous|рьяный
+a blessing in disguise|не было бы счастья, да несчастье помогло
+a far cry from|совсем не то, что
+abrasive|резкий, грубоватый (о манерах)
+acumen|деловая хватка
+adept|искусный
+affluent|состоятельный
+aloof|отчуждённый
+ambivalent|двойственный (о чувствах)
+amiss|неладно
+apprehensive|полный опасений
+arduous|изнурительный
+astute|прозорливый
+at odds with|в разногласии с
+at the end of the day|в конечном счёте
+banter|подшучивание
+beat around the bush|ходить вокруг да около
+bleak|безрадостный
+blunt|прямолинейный, тупой
+boisterous|шумный, буйный
+brazen|наглый
+by the skin of one's teeth|чудом, еле-еле
+cajole|уговаривать лестью
+callous|бессердечный
+cathartic|очищающий (эмоционально)
+cliché|клише
+commensurate|соразмерный
+complacency|самоуспокоенность
+compulsive|навязчивый
+conducive|способствующий
+contentious|вызывающий споры
+contrived|надуманный
+convoluted|запутанный, замысловатый
+coy|скромничающий, жеманный
+crass|грубый, вульгарный
+cut corners|халтурить, экономить на качестве
+debacle|провал, фиаско
+deadpan|невозмутимый (о юморе)
+delve into|углубляться в
+demeanour|манера держаться
+despondent|удручённый
+detached|отстранённый
+deterrent|сдерживающий фактор
+devious|хитрый, коварный
+dichotomy|противопоставление
+disgruntled|недовольный
+disillusioned|разочарованный
+dismissive|пренебрежительный
+dispel|развеять
+dubious|сомнительный
+eerie|жуткий
+embellish|приукрашивать
+encompass|охватывать
+endearing|милый, трогательный
+enthral|очаровывать
+epitome|воплощение
+exasperating|выводящий из себя
+exhilarating|бодрящий, захватывающий
+fallacy|заблуждение
+far-reaching|далеко идущий
+fickle|непостоянный
+finicky|капризный (в мелочах)
+flamboyant|яркий, эффектный
+fleeting|быстротечный
+flimsy|хлипкий, неубедительный
+foolproof|безотказный
+forthright|прямой, откровенный
+fraught|чреватый
+frivolous|легкомысленный
+galvanise|побуждать к действию
+gaffe|оплошность
+gloat|злорадствовать
+glib|бойкий, поверхностный
+grapple with|биться над
+gratuitous|неоправданный
+haphazard|беспорядочный, наобум
+heed|прислушиваться к
+hinge on|зависеть от
+hit the nail on the head|попасть в точку
+hone|оттачивать
+hunch|предчувствие
+idyllic|идиллический
+impromptu|экспромтом
+inadvertently|нечаянно
+incisive|острый (об уме)
+inconsequential|несущественный
+indignant|возмущённый
+inept|неумелый
+infuriating|бесящий
+ingenious|изобретательный
+innate|врождённый
+insidious|коварный, подкрадывающийся
+irk|раздражать
+jaded|пресыщенный
+jargon|жаргон
+kudos|респект, признание
+lackadaisical|апатичный
+lament|сетовать
+lavish|щедрый, роскошный
+lax|нестрогий, небрежный
+listless|безучастный
+lofty|возвышенный
+lucid|ясный, понятный
+lurk|таиться
+make amends|загладить вину
+mediocre|посредственный
+meander|петлять
+melancholy|меланхолия
+menial|низкоквалифицированный (о работе)
+misgivings|опасения
+moot point|спорный вопрос
+morose|угрюмый
+nebulous|туманный
+nitpick|придираться
+nonplussed|озадаченный, растерянный
+nostalgia|ностальгия
+oblivious|не замечающий
+off the cuff|без подготовки
+ominous|зловещий
+onerous|обременительный
+opulent|роскошный
+outlandish|нелепый, диковинный
+palpable|ощутимый, явный
+paltry|ничтожный (о сумме)
+panacea|панацея
+paradox|парадокс
+pedantic|педантичный
+petulant|раздражительный
+placate|задабривать
+poignant|щемящий
+precocious|не по годам развитый
+preposterous|абсурдный
+prolific|плодовитый
+quaint|старомодно-очаровательный
+quibble|спорить по мелочам
+rampant|безудержный, повсеместный
+recluse|затворник
+redeem|искупать
+relish|смаковать, наслаждаться
+remorse|раскаяние
+reminisce|предаваться воспоминаниям
+retort|резко ответить
+reverberate|отзываться эхом
+rife with|полный (чего-то плохого)
+sardonic|сардонический
+savvy|подкованный, смекалистый
+scathing|уничтожающий (о критике)
+scrutinise|тщательно изучать
+seamless|плавный, бесшовный
+shrug off|отмахнуться
+skittish|пугливый
+smug|самодовольный
+snide|ехидный
+solace|утешение
+sombre|мрачный
+squander|растрачивать
+staunch|стойкий, верный
+stoic|стоический
+stringent|жёсткий (о правилах)
+sublime|величественный
+surmise|предполагать
+take for granted|принимать как должное
+tantamount to|равносильный
+tenuous|натянутый, слабый
+the elephant in the room|очевидная проблема, о которой молчат
+throw in the towel|сдаться
+trite|банальный, затёртый
+unassuming|непритязательный
+uncanny|сверхъестественный
+undeterred|непоколебимый
+unflappable|невозмутимый
+unscathed|невредимый
+unwieldy|громоздкий
+vexed|раздосадованный
+vindictive|мстительный
+wane|ослабевать
+whimsical|причудливый
+wistful|задумчиво-тоскливый
+wrath|гнев
+zest|задор

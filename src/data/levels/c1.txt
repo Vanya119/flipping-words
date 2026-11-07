@@ -126,3 +126,176 @@ unprecedented|беспрецедентный
 viable|жизнеспособный
 vulnerable|уязвимый
 whereas|тогда как
+adamant|непреклонный
+backlash|негативная реакция
+bear in mind|иметь в виду
+bewildered|озадаченный
+blatant|откровенный, наглый
+bluntly|прямо, без обиняков
+brag|хвастаться
+brush up on|освежить знания
+by and large|в общем и целом
+catch up|наверстать, пообщаться
+cherish|дорожить
+chronic|хронический
+clarify|прояснять
+clumsy|неуклюжий
+compassionate|сострадательный
+concede|признавать, уступать
+conceited|самовлюблённый
+condescending|снисходительный
+constructive|конструктивный
+crave|жаждать
+cringe|испытывать неловкость за кого-то
+daunting|пугающий (о задаче)
+deceive|обманывать
+dedicated|преданный (делу)
+delegate|делегировать
+discreet|сдержанный, тактичный
+dismiss|отвергать, увольнять
+disposable|одноразовый
+distraught|обезумевший от горя
+downside|недостаток, минус
+drastic|радикальный
+dwell on|зацикливаться на
+elated|ликующий
+endeavour|стремление, попытка
+endure|выносить, терпеть
+engaging|увлекательный
+entrepreneur|предприниматель
+envisage|представлять себе (будущее)
+erratic|непредсказуемый
+evoke|вызывать (чувства)
+exasperated|выведенный из себя
+excel|преуспевать, выделяться
+exceptionally|исключительно (очень)
+far-fetched|притянутый за уши
+flaw|изъян
+flourish|процветать
+fond of|любящий что-то
+frantic|лихорадочный
+fulfilling|приносящий удовлетворение
+genuinely|искренне, по-настоящему
+gist|суть
+gloomy|мрачный
+grasp|понимать, схватывать
+grievance|жалоба, обида
+gullible|доверчивый
+hands-on|практический
+hectic|суматошный
+hesitant|нерешительный
+hindsight|взгляд задним числом
+hypocrite|лицемер
+impulsive|импульсивный
+in a nutshell|в двух словах
+indifferent|равнодушный
+insightful|проницательный
+intimidating|пугающий, устрашающий
+intriguing|интригующий
+irrelevant|не относящийся к делу
+lenient|мягкий, нестрогий
+let alone|не говоря уже о
+liable|юридически ответственный
+long-term|долгосрочный
+make ends meet|сводить концы с концами
+mindset|образ мышления
+nag|пилить, придираться
+naive|наивный
+nonetheless|тем не менее
+notable|примечательный
+nuance|нюанс
+on the verge of|на грани
+outspoken|откровенный в высказываниях
+overrated|переоценённый
+overlook|упускать из виду
+oversee|контролировать, руководить
+patronising|покровительственный
+peer|ровесник, коллега
+persistent|настойчивый
+pitfall|подводный камень
+ponder|обдумывать
+predicament|затруднительное положение
+pretentious|претенциозный
+procrastinate|откладывать на потом
+prone to|склонный к
+qualm|угрызение, сомнение
+rapport|взаимопонимание
+reckless|безрассудный
+reconcile|примирять(ся)
+refrain from|воздерживаться от
+reiterate|повторять ещё раз
+relentless|неустанный
+reluctantly|неохотно
+remedy|средство (от чего-то)
+renowned|прославленный
+resent|возмущаться, обижаться
+resourceful|находчивый
+retain|сохранять, удерживать
+ruthless|безжалостный
+shortcoming|недочёт
+showcase|демонстрировать
+shrewd|сообразительный, хитрый
+skim|бегло просматривать
+snag|загвоздка
+soaring|стремительно растущий
+spontaneous|спонтанный
+stance|позиция
+steep|крутой, резкий
+stern|суровый (о человеке)
+streamline|оптимизировать
+strive|стремиться
+succinct|краткий, ёмкий
+sustain|поддерживать, выдерживать
+tactful|тактичный
+tentative|предварительный
+thrive|расцветать, преуспевать
+token|знак, символ
+trait|черта (характера)
+trigger|запускать, вызывать
+turmoil|смятение, беспорядки
+ulterior motive|скрытый мотив
+underlying|лежащий в основе
+unwind|расслабиться
+upbeat|позитивный, бодрый
+utterly|совершенно
+vibrant|яркий, полный жизни
+vivid|яркий (о воспоминаниях)
+wary|настороженный
+whim|прихоть
+wholesome|полезный, здоровый
+wit|остроумие
+wrap up|завершать
+yearn|тосковать
+come across as|производить впечатление
+cut back on|сокращать (потребление)
+fall through|сорваться (о планах)
+get away with|сойти с рук
+live up to|оправдывать (ожидания)
+put forward|выдвигать (идею)
+rule out|исключать (вариант)
+stand up for|заступаться за
+take on|брать на себя
+weigh up|взвешивать (варианты)
+accountable|подотчётный
+allegedly|якобы
+anecdote|случай из жизни
+benchmark|ориентир, эталон
+consolidate|укреплять, объединять
+contingency|непредвиденный случай
+counterpart|коллега (с другой стороны)
+deadlock|тупик
+disclose|раскрывать (информацию)
+dispute|спор
+empathy|эмпатия
+foresee|предвидеть
+gratifying|приятный, отрадный
+hostile|враждебный
+inclined|склонный
+intervene|вмешиваться
+novelty|новизна
+precedent|прецедент
+prevail|преобладать
+in retrospect|оглядываясь назад
+undertake|предпринимать
+unanimous|единогласный
+versatile|разносторонний

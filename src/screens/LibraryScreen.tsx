@@ -47,7 +47,7 @@ export function LibraryScreen({ kind }: { kind: LibraryKind }) {
           <Cell
             before={<span className="text-link"><IconTarget size={22} /></span>}
             title="Не знаешь свой уровень?"
-            subtitle="Пройди тест — займёт пару минут"
+            subtitle="Пройди тест — займёт несколько минут"
             chevron
             onClick={() => push({ name: 'levelTest' })}
           />
